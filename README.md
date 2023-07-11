@@ -2,7 +2,7 @@
 
 ## [Week 1 Summary: Intro to JupyterHub, Linux and GitHub](#week-1-details-intro-to-jupyterhub-linux-and-github-1)
 
-1. [Log in to Drexel Medicine JupyterHub](#1-log-in-to-drexel-medicine-jupyterhub)
+1. [Log in to Drexel Medicine VPN and JupyterHub](#1-log-in-to-drexel-medicine-jupyterhub)
 2. [Open a terminal window in JupyterHub](#2-open-a-terminal-window-on-jupyterhub)
 3. [Make a directory to store your projects (w/Linux commands)](#3-make-a-directory-to-store-your-projects-wlinux-commands)
 4. [Commit (save vertion) and backup your project (w/GitHub)](#4-save-and-backup-your-projects-wgithub)
@@ -22,7 +22,7 @@
 
 ### 2. Open a terminal window on JupyterHub
 #### 2a. Open JupyterHub
-http://10.11.19.24/
+http://10.11.19.48/
 
 #### 2b. Open a terminal window
 In web browser, from JupyterLab menu:    
@@ -34,13 +34,13 @@ File -> New -> Terminal
 ### 3. Make a directory to store your projects (w/Linux commands):
 In the terminal window that you just opened, type each command and press the [Enter] button:    
 * Show the name of your home directory (`pwd`)
-* Show contents of your home directory (`ls`)
+* List the contents of your home directory (`ls`)
 * Make a new directory to store your projects (`mkdir repos`)
 * Change to your new directory (`cd repos`)
 
 ### 4. Save and backup your projects (w/GitHub)
 * Create an account on https://github.com
-* Copy the Drexel Medicine OMICS project to your GitHub account (fork)
+* Copy the Drexel Medicine OMICS project, https://github.com/dvklopfenstein/OMICS, to your GitHub account (fork)
 * Download a copy to your PC (`git clone https://github.com/<your_profile>/OMICS`)    
 
 ### 5. Week 1 Lab Instructions
