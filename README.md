@@ -1,4 +1,9 @@
 # Drexel Medicine OMICS
+[MIIM 6230S](https://termmasterschedule.drexel.edu/webtms_du/courseDetails/15664?crseNumb=620S)    
+Aug 21, 2023 to Dec 15, 2023    
+T 9am-11:50pm
+Room 3302    
+
 
 ## [Week 1 Summary: Intro to JupyterHub, Linux and GitHub](#week-1-details-intro-to-jupyterhub-linux-and-github-1)
 
@@ -39,9 +44,17 @@ In the terminal window that you just opened, type each command and press the [En
 * Change to your new directory (`cd repos`)
 
 ### 4. Save and backup your projects (w/GitHub)
-* Create an account on https://github.com
-* Copy the Drexel Medicine OMICS project, https://github.com/dvklopfenstein/OMICS, to your GitHub account (fork)
-* Download a copy to your PC (`git clone https://github.com/<your_profile>/OMICS`)    
+#### 4a. Create an account on https://github.com
+#### 4b. Copy (Fork) the Drexel Medicine OMICS class, https://github.com/dvklopfenstein/OMICS, to your GitHub account (Fork)
+<p><img src="/doc/images/wk01d_fork_desc.png" alt="Connect" width="400"></p>    
+<p><img src="/doc/images/wk01e_fork_button.png" alt="Connect" width="400"></p>    
+#### 4c. Download (git clone) a copy to your PC     
+
+
+<p><img src="/doc/images/wk01f_clone.png" alt="Connect" width="400"></p>    
+```
+git clone https://github.com/<your_profile>/OMICS
+```
 
 ### 5. Week 1 Lab Instructions
 #### 5a. Create a batch file, `week01_lab.sh` which contains all commands from step 2:
@@ -50,6 +63,7 @@ But you can use your favorite editor:
   * `nano week01_lab.sh`
   * `vim week01_lab.sh`
   * `emacs week01_lab.sh`
+
 ```
 $ cd ~/repos/OMICS
 $ nanno week01_lab.sh
