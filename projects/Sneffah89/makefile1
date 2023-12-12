@@ -1,0 +1,21 @@
+# Define the input VCF file and the output snpEff VCF file
+INPUT_VCF = merged.vcf
+OUTPUT_SNPEFF_VCF = merged.snpeff.vcf
+
+# Rule to convert VCF to snpEff VCF
+$(OUTPUT_SNPEFF_VCF): $(INPUT_VCF)
+	snpEff eff -c /data/share/courses/OMICS/hivbrain/snpeff-db/snpEff.config HXB2F $< > $@
+
+# Rule to clean up intermediate files
+clean:
+	rm -f $(OUTPUT_SNPEFF_VCF)
+
+# Make all the rules
+all: $(OUTPUT_SNPEFF_VCF)
+
+# Specify that the clean rule doesn't create a file named "clean"
+.PHONY: clean
+
+
+
+

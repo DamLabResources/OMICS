@@ -1,0 +1,14 @@
+s:Prevotella_shahii
+s:Prevotella_disiens  
+s:Prevotella_timonensis 
+s:Prevotella_buccalis  
+s:Prevotella_melaninogenica 
+s:Prevotella_nanceiensis 
+s:Prevotella_paludivivens  
+s:Prevotella_histicola 
+s:Prevotella_pallens 
+s:Prevotella_nigrescens  
+s:Prevotella_bivia
+s:Prevotella_oris 
+s:Prevotella_histicola 
+s:Prevotella_salivae
