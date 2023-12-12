@@ -18,7 +18,7 @@
 
 **How the files are organized:**
 * Files are named and organized according to:
-	* The strain being studied (example: RdKW20, GC594, 86028Np, etc.)
+	* The strain being studied (example: RdKW20, GC594)
 	* The condition under which the strain was examined (example: biofilm, supernatant, log phase,  planktonic, etc.)
 * All files are fastq.gz format and were originally viewed and manipulated in R
 

@@ -16,3 +16,10 @@
 1. Concatenate desired files together
 2. Align files to reference genome
 3. Calculate coverage estimations
+4. Variant calling – make a .bcf file from my .bam files
+	```
+	bcftools mpileup -f refs/RdKW20.fasta aligned_files/RdKW20bio24hr5_S188.concat.bam | bcftools call -mv -Ob -o Rdbio5_calls.bcf
+	bcftools view Rdbio4_calls.bcf | less -S
+	bcftools stats Rdlog6_calls.bcf | less -S
+	```
+5. Try making a pipeline
