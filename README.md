@@ -6,7 +6,7 @@ MIIM-620S
 3. [Schedule](#weekly-schedule)
 4. [Projects](projects/README.md)
 5. [Grading](grading/README.md)
-6. [vim, a powerful editor used by coders on the commandline](doc/vim.md)
+6. [Cheatsheets](#cheatsheets)
 
 ## Course 
 
@@ -62,6 +62,11 @@ This is how you will _submit_ assignments.
 
 The `projects` folder contains information about the ongoing project and is where you will keep information and notes.
 
+## Cheatsheets
+* [GNU/Linux and vim](https://github.com/kubeopsskills/linux-cheatsheet)
+* [GNU/Linux basics](https://github.com/progrmoiz/linux-cheatsheet/blob/master/cheatsheet/my-linux-cheatsheet.md)
+* [My favorite vim cheatsheet](https://vim.rtorr.com)
+
 
 ## Weekly Schedule
 
@@ -85,4 +90,4 @@ The `projects` folder contains information about the ongoing project and is wher
 |   16                            |12/04/2024 |                     | Project                                        |Everyone      | unreleased
 |   17                            |12/04/2024 |Project Presentations| Project Presentations                          |Everyone      | unreleased
 
-Copyright (C) 2024, Drexel Medicine. All rights reserved
+Copyright (C) 2023-present, Drexel Medicine. All rights reserved
