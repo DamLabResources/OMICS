@@ -63,7 +63,7 @@ This is how you will _submit_ assignments.
 The `projects` folder contains information about the ongoing project and is where you will keep information and notes.
 
 ## Cheatsheets
-* [GNU/Linux and vim](https://github.com/kubeopsskills/linux-cheatsheet)
+* [GNU/Linux and vim](https://github.com/kubeopsskills/linux-cheatsheet#directory-commands)
 * [GNU/Linux basics](https://github.com/progrmoiz/linux-cheatsheet/blob/master/cheatsheet/my-linux-cheatsheet.md)
 * [My favorite vim cheatsheet](https://vim.rtorr.com)
 
