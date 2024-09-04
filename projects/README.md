@@ -1,4 +1,4 @@
-# Projects
+# This is the new README file where I describe my OMICS project
 
 In this course you will complete and independent project analyzing some type of genomic data.
 Each week we will give you excercises to analyze your dataset that are related to the topic covered in class.
