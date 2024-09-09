@@ -1,4 +1,4 @@
-# Week 3 - Demultiplexing
+# Week 5 - Demultiplexing
 
 1. [Introduction](#introduction)
 2. [Learning Objectives](#learning-objectives)
