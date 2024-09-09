@@ -1,5 +1,15 @@
 # My Project
 
-## Decscription
+## Introduction
 
-## Data
+## Literature Review
+
+## Methodology
+
+## Results
+
+## Discussion
+
+## Conclusion
+
+## References
