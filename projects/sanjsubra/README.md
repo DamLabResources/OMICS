@@ -1,13 +1,13 @@
-#Introduction
+# Introduction
 
-#Literature Review
+# Literature Review
 
-#Methodology
+# Methodology
 
-#Results
+# Results
 
-#Discussion
+# Discussion
 
-#Conclusion
+# Conclusion
 
-#References
+# References
