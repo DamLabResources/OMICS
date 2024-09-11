@@ -13,5 +13,3 @@ Project description: the goal of this project is to use RNAseq data to profile l
 ## Conclusion
 
 ## References
-
-
