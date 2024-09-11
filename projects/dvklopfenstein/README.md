@@ -6,6 +6,15 @@ and will make **BIG** discoveries.
 
 Some _discoveries_ will be small.
 
+This is a numbered list:
+1. Apples
+2. Oranges
+
 ## Data
-* data1
-* data2
+* data
+* data
+
+|Num|Type  
+|---|--
+| 5 |Apples
+| 3 |Oranges
