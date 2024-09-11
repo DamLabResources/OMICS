@@ -37,7 +37,7 @@ This class will begin to show how to interact with these amazing projects.
   - Welcome
   - We have been expecting you
   - Let me show you around
-* Know how to navigate [vim basics](images/vim_basics.png)
+* Know how to navigate [vim basics](images/README.md)
 
 
  
