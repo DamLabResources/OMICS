@@ -66,6 +66,7 @@ The `projects` folder contains information about the ongoing project and is wher
 * [GNU/Linux and vim](https://github.com/kubeopsskills/linux-cheatsheet#directory-commands)
 * [GNU/Linux basics](https://github.com/progrmoiz/linux-cheatsheet/blob/master/cheatsheet/my-linux-cheatsheet.md)
 * [My favorite vim cheatsheet](https://vim.rtorr.com)
+* [Markdown styling](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 
 ## Weekly Schedule
@@ -74,8 +75,8 @@ The `projects` folder contains information about the ongoing project and is wher
 |---------------------------------|-----------|---------------------|------------------------------------------------|--------------|-------
 |  **1**                          |08/21/2024 | Hello World         | Command line and GNU/Linux OS                  |DVK, JCM      | unreleased
 |  **2**                          |08/28/2024 | Hello World         | vim, the powerful and ubiquitous editor        |DVK           | unreleased
-| [**3**](/content/wk03/README.md)|09/04/2024 | Hello World         | git part I                                     |DVK           | unreleased
-|    4                            |09/11/2024 | Hello World         | git part II                                    |DVK           | unreleased
+| [**3**](content/wk03/README.md) |09/04/2024 | Hello World         | git part I                                     |DVK           | **released**
+| [**4**](content/wk04/README.md) |09/11/2024 | Hello World         | git part II                                    |DVK           | **released**
 |    5                            |09/18/2024 | Hello World         |Seqkit command line tools for manipulating fastx|WND, JCM      | unreleased
 |    6                            |09/25/2024 | Align all the things| NGS read alignment                             |WND, JCM      | unreleased
 |    7                            |10/02/2024 | Align all the things|Visualizing alignments with IGV & file transfer |WND, JCM      | unreleased

@@ -1,0 +1,27 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
+    EFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0
+        IJKLMNOPQRSTUVWXYZabcdefghijklmn
+        IJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy012345
+        IJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx
+            MNOPQRSTUVWXYZabcdefghijklmnopqrstuvw
+            MNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0
+            MNOPQRSTUVWXYZabcd
+        IJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy
+        IJKLMNOPQRSTUVWXYZabcdefghijkl
+        IJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy012345678
+    EFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqr
+    EFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop
+    EFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop
+        IJKLMNOPQRSTUVWXYZabcdef
+        IJKLMNOPQRSTUVWXYZabcdefghi
+        IJKLMNOPQRSTUVWXYZabcde
+            MNOPQRSTUVWXYZabcdefghijk
+            MNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0123
+            MNOPQRSTUVWXYZabcdefghijklmnopqrstuv
+        IJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy01234
+    EFGHIJKLMNOPQRSTUVWXYZabcdefghijklmn
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy01
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy012345678
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxy0123
