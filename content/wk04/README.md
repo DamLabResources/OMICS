@@ -1,3 +1,5 @@
+
+
 # Week 1 - Begin working using JupyterHub, GitHub and git
 
 1. [Introduction](#introduction)
