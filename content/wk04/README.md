@@ -2,8 +2,8 @@
 
 1. [Introduction](#introduction)
 2. [Learning Objectives](#learning-objectives)
-  * [git](#git)
-  * [vim](#vim)
+  1. [git](#git)
+  2. [vim](#vim)
 3. [Review Material](#review-material)
 4. [Lecture Material](OMICS_git.pdf)
 5. [Assignment](omics_assignment.md)
