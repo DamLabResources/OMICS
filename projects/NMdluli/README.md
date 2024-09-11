@@ -1,8 +1,17 @@
-#Project
+# Introduction
+Project description: the goal of this project is to use RNAseq data to profile liver stage P. vivax parasites.
 
 
-## Description
-This project is about P. vivax
+## Literature Review
+
+## Methodology
+
+## Results
+
+## Discussion
+
+## Conclusion
+
+## References
 
 
-## Data
