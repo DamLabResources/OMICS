@@ -1,9 +1,7 @@
 # Week 1 - Begin working using JupyterHub, GitHub and git
 
 1. [Introduction](#introduction)
-2. [Learning Objectives](#learning-objectives)
-  - [git](#git)
-  - [vim](#vim)
+2. [Learning Objectives](#learning-objectives) with [git](#git) and [vim](#vim)
 3. [Review Material](#review-material)
 4. [Lecture Material](OMICS_git.pdf)
 5. [Assignment](omics_assignment.md)
