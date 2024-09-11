@@ -1,4 +1,18 @@
-my github login is ardenedgerton 
+OMICS PROJECT:
 
 
-this is a practice readme that we remade after using ssh to restart and reclone 
+
+Introduction:
+
+Literature Review:
+
+Methodology:
+
+Results:
+
+Discussion: 
+
+Conclusion: 
+
+References:
+ 
