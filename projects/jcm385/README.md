@@ -1,6 +1,8 @@
 # My Markdown File
 
-## Some stuff
+## Stuff
+
+## Some more stuff
 
 **Bold**
 _Italics_
