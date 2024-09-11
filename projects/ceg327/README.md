@@ -8,4 +8,12 @@ You will be in close collaboration with your instructors to ensure the dataset i
 
 Each student should create a subdirectory under this directory by their GitHub user-id.
 This is where you will keep notes, links, results, figures, etc.
-As with the weekly assignments, you will submit PRs as you complete each task. 
+As with the weekly assignments, you will submit PRs as you complete each task.
+
+1. Introduction
+2. Literature Review
+3. Methods
+4. Results
+5. Discussion
+6. Conclusion
+7. References 
