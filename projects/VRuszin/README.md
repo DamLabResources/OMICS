@@ -1,13 +1,18 @@
 # My OMICS Project
-**2024 Nature paper**
-TOP 38036767 R. HA...  -1 i 2024    14  0  75 au[22](Audrey Lee)
-**TITLE**:
+## Title
 ```
 BCG vaccination stimulates integrated organ immunity by feedback 
 of the adaptive immune response to imprint prolonged
 innate antiviral resistance
 ```
 
+## 2024 Nature paper info
+```
+COL 2        3  4       5 6 7        8  9  10 au[11](authors)
+TYP PMID     RP HAMCc   % G YEAR   cit cli ref au[00](authors)
+--- -------- -- -----  -- - ----   --- --- -- -----------------
+TOP 38036767 R. HA...  -1 i 2024    14  0  75 au[22](Audrey Lee)
+```
 ## Description
 For my OMICS project, I will be looking at singe cell RNAseq data obtained from lung ECs and immune cells. This data was used in a paper looking at how BCG vaccination stimulates immunity via helper T cells help to imprint antiviral resistance (1).
 
