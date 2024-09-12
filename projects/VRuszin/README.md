@@ -26,10 +26,7 @@ For my OMICS project, I will be looking at singe cell RNAseq data obtained from 
 * [GSE244126](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE244126)
 ### Samples
 #### Sample 1) GSM7807682 Lung, D0, rep 1
-SRA: SRX21898392
-SRR: SRR26186565
-SRR: TBD
-  
+SRA: SRX21898392    
 
 Run         | # of Spots  | # of Bases | Size  |Published
 ------------|-------------|------------|-------|----------
@@ -37,4 +34,3 @@ SRR26186565 | 114,895,299 | 15.9G      | 4.8Gb |2023-12-04
 SRR26186566 | 115,135,212 | 15.9G      | 4.7Gb |2023-12-04
 
 #### Sample 2) GSM7807683 Lung, D21, rep 1
-SRR26186565
