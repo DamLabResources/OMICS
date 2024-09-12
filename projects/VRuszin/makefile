@@ -24,5 +24,6 @@
 # SRR26186565
 #
 
+# https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump
 download:
 	fasterq-dump -p SRR26186565
