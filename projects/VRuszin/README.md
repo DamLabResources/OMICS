@@ -1,5 +1,13 @@
-# My project
+# My OMICS Project
 
-## My project will look at PBMCS from P. falciparum patients that will then be used for single cell RNA sequencing. The paper with the data set looked at different cell types to see genes with differential expression. 
+## Description
+For my OMICS project, I will be looking at singe cell RNAseq data obtained from lung ECs and immune cells. This data was used in a paper looking at how BCG vaccination stimulates immunity via helper T cells help to imprint antiviral resistance (1).
 
-## Dooley, N.L., Chabikwa, T.G., Pava, Z. et al. Single cell transcriptomics shows that malaria promotes unique regulatory responses across multiple immune cell subsets. Nat Commun 14, 7387 (2023). https://doi.org/10.1038/s41467-023-43181-7
+## Introduction
+## Literature Review
+## Methodology
+## Results
+## Discussion
+## Conclusion
+## References
+1. Lee, A., Floyd, K., Wu, S. et al. BCG vaccination stimulates integrated organ immunity by feedback of the adaptive immune response to imprint prolonged innate antiviral resistance. Nat Immunol 25, 41–53 (2024). https://doi.org/10.1038/s41590-023-01700-0 
