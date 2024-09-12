@@ -1,4 +1,7 @@
-DIROUT := share/vr433
+DIROUT := /data/share/vr433
+
+hello:
+	echo $(DIROUT)
 
 
 # Download FASTQ files from RNA-seq single cell Illumina HiSeq 4000 reads
