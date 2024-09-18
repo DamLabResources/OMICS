@@ -5,7 +5,11 @@ This goal of this project is to analyze publicly available ATAC-seq datasets fro
 
 2. Literature Review
 
-3. Methods
+3. Methodology
+Bioproject: PRJNA764194
+SRA: SRP337615
+	SRR15931104: J-Lat 8.4-ATAC_TNF_rep1; Homo sapiens; ATAC-seq
+	
 
 4. Results
 
