@@ -77,7 +77,7 @@ The `projects` folder contains information about the ongoing project and is wher
 |  **2**                          |08/28/2024 | Hello World         | vim, the powerful and ubiquitous editor        |DVK           | unreleased
 | [**3**](content/wk03/README.md) |09/04/2024 | Hello World         | git part I                                     |DVK           | **released**
 | [**4**](content/wk04/README.md) |09/11/2024 | Hello World         | git part II                                    |DVK           | **released**
-|    5                            |09/18/2024 | Hello World         |Seqkit command line tools for manipulating fastx|WND, JCM      | unreleased
+| [**5**](content/wk05/README.md) |09/18/2024 | Hello World         |Seqkit command line tools for manipulating fastx|WND, JCM      | **released**
 |    6                            |09/25/2024 | Align all the things| NGS read alignment                             |WND, JCM      | unreleased
 |    7                            |10/02/2024 | Align all the things|Visualizing alignments with IGV & file transfer |WND, JCM      | unreleased
 |    8                            |10/09/2024 | Align all the things|nf-core pipelines and project discussion        |WND, JCM      | unreleased
