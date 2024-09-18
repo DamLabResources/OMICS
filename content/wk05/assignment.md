@@ -107,3 +107,30 @@ Write a brief (~1 paragraph) reflecting on the results.
 Consider the following questions.
  - Are there an equal number of reads from each sample?
  - Are the read lengths the same between each sample?
+ 
+ 
+## Project Task
+
+### Exploration
+
+I want you to use the `seqkit` library on your own files.
+Some ideas:
+ - Use `seqkit head` to peak at them.
+ - Use `seqkit stats` to count and quantify them.
+ - Use `seqkit grep` to search for sequences that contain an 'interesting' sequence.
+ - Use `seqkit amplicon` to do a computational PCR.
+
+In your project readme discuss what you did and what you found.
+Include commands and outputs and where appropriate link to the biology.
+
+### Pack up your files
+
+`.fastq` files are needlessly large and paradoxically slower to read than compressed information.
+`seqkit` allows you to gzip files making them significantly smaller.
+Use the terminal documentation, `seqkit` website FAQ, web search, ChatGPT, etc to figure out how to gzip your files.
+Use `du -h` to show the original and compressed files and their relative sizes.
+Then, delete the unpacked ones.
+Then, write a brief markdown file in your repo directory describing the steps you took.
+
+
+If you already have `.fastq.gz` files, then you don't need to do anything.
