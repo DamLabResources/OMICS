@@ -13,7 +13,6 @@ SRA: SRP337615
 
 4. Results
 
-more cats yay
 5. Discussion
 
 6. Conclusion
