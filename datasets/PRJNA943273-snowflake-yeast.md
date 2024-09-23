@@ -24,5 +24,5 @@ https://www.ncbi.nlm.nih.gov/bioproject?term=PRJNA943273
 This dataset is currently downloaded to:
 
 ```bash
-/data/share/courses/OMICS/PRJNA943273/*.fastq
+/data/share/OMICS/wk06/reads/
 ```
