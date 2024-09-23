@@ -1,4 +1,4 @@
-# Week 4 - Alignment
+# Week 6 - Alignment
 
 1. [Introduction](#introduction)
 2. [Learning Objectives](#learning-objectives)
