@@ -1,0 +1,105 @@
+# NOTES & CLASS ASSIGNMENTS
+______________________________________________________________
+## Week 4: Notes
+
+### *This week we learned how to navigate vim, as well as git commands*
+
+When scolling around move around mode or "normal mode" you can use these commands:
+    gg : scroll up the file 
+    G : scroll down the file 
+    . : repeat last command 
+    u : undo 
+    CTRL + r : redo 
+
+IF, you are in normal mode, and you want to go to insert mode you can just press "i". However there are other ways to go from normal to insert > more specifically. When in normal mode, instead of just using "i" for insert, you can also use the following commands:
+
+i: insert/start typing where the curser currrently is
+I: insert at the start of the line 
+A: insert or "append" at the end of the line 
+O: open a new line above
+o: open a new line below 
+
+
+## Week 4: Assignment
+
+- Create a directory in the share folder, and upload data that we will be using for the project
+- Update the project READMe within personal project folder
+- Add a table in project READme with the samples that are being used. 
+
+
+
+____________________________________________________________
+
+
+## Week 5: Notes
+ 
+### *This week we went over how to work with seqkit. We learned how to use this tool to make inquiries about both fasta/q files. Below are a list of commands that we learned as well as the associated function of each.*
+
+
+# Introduction
+**First, a note about the two directories that I have:**
+
+(1)	How to get into the folder that has my data:
+
+    ` $ cd share/aoe23`
+
+(2)	How to get into my repos that includes the ReadME files for each week: 
+    `$ cd repos/OMICS/projects/aoe23`
+
+**Start working in jupyter notebook**
+
+In order to start working in the jupyter notebook must make sure that we pull down any changes that Dr. Dampier has made throughout the week:
+1.	Go to github fork that I have: https://github.com/ardenedgerton/OMICS
+2.	Click on Sync Fork
+3.	Open Jupyter notebook: http://10.248.148.22/hub/user/aoe23/lab/tree/share
+4.	`$ cd repos/OMICS/`
+5.	`$ git pull`
+6.	`$ git config pull.rebase true`
+7.	`$ git log`
+
+This will pull down the changes that were made from the fork/and this will also allow us to see the log to confirm that we have the recent additions. Another validation for this is to open week 5 folder and check for its contents (assuming that you are already in repos/OMICS/ :
+
+8.	`$ cd content/wk05`
+
+9.	`$ tree`
+
+
+
+## Week 5 Assignment 
+*Deliverables for next week: 
+1.	Zip up files
+2.	Use du -h to show the change in size to validate change in size 
+3.	Upload readME*
+
+# 1. Zip up files
+
+*Last week  I uploaded fastq files to the share/aoe23/. This week I want to (1) move those files into a folder that is called data, and (2) then zip them up so that they are smaller. I will keep the unzipped and zipped files temporarily in order to (3) show their change in disk space, and then I will (4) remove the files.
+
+
+# Move files into new folder
+ 
+First make folder: `mkdir data`
+then move `mv SRR27237081.fastq SRR27237082.fastq data/`
+noted that need to rename SRR272370771 to remove the 1 so did this code: `mv data/SRR272370771.fastq SRR27237077.fastq`
+realized that the move was then just in ao23 folder so moved it directly into data by using this code `mv SRR27237077.fastq data/SRR27237077.fastq`
+
+repeat the move of the rest of the files into data folder 
+
+
+# Zip the files
+
+`gzip -9 data/SRR27237076.fastq -c > data/SRR27237076.fastq.gz
+gzip -9 data/SRR27237082.fastq -c > data/SRR27237082.fastq.gz
+gzip -9 data/SRR27237081.fastq -c > data/SRR27237081.fastq.gz
+gzip -9 data/SRR27237077.fastq -c > data/SRR27237077.fastq.gz`
+
+
+Repeat for each file 
+Note this takes a long time to do and so i opened multiple terminals to do this at the same time, and then worked on something else
+
+Once files zipped, then look at the difference in size of each: 
+
+
+
+
+ 
