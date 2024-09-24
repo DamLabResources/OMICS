@@ -108,7 +108,13 @@ Consider the following questions.
  - Are there an equal number of reads from each sample?
  - Are the read lengths the same between each sample?
  
- 
+
+### Clean up
+
+When you are done, check the files in the `content/wk05` folder.
+Ensure that you haven't commited any fastq files or gz files into the repo.
+If you have, use `git rm {path}` to remove the file.
+
 ## Project Task
 
 ### Exploration
