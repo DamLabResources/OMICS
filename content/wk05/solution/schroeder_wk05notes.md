@@ -3,8 +3,9 @@ Here are my notes for my week 5 homework assignment
 
 seqkit stats multiplexed.fq 
 
-file            format  type  num_seqs  sum_len  min_len  avg_len  max_len
-multiplexed.fq  FASTQ   DNA      1,900  264,787       43    139.4      159
+|file|format |type  |num_seqs  |sum_len  |min_len  |avg_len  |max_len|
+|---|---|---|---|---|---|---|---|
+|multiplexed.fq  |FASTQ   |DNA      |1,900  |264,787       |43    |139.4      |159|
 
 There are 1900 reads in the sample based on num_seqs. Since there are sample identifiers that do not follow a specific pattern (most start with @D00468 but some are @ and then a random series of numbers), I needed to grep based on the @. Seqkit grep was behaving weirdly so I used normal grep to verify this and again ended up with 1900 reads.
 
@@ -31,11 +32,12 @@ Then I got the statistics for all of my samples
 
 seqkit stats SRR23803536.trimmed.fasta.gz SRR23803537.trimmed.fasta.gz SRR23803538.trimmed.fasta.gz SRR23803539.trimmed.fasta.gz > demuxed.stats.tsv
 
-file                          format  type  num_seqs  sum_len  min_len  avg_len  max_len
-SRR23803536.trimmed.fasta.gz  FASTA   DNA      1,234  153,328       35    124.3      151
-SRR23803537.trimmed.fasta.gz  FASTA   DNA        567   82,897       35    146.2      151
-SRR23803538.trimmed.fasta.gz  FASTA   DNA         89   12,039       64    135.3      151
-SRR23803539.trimmed.fasta.gz  FASTA   DNA         10    1,323       96    132.3      151
+|file                          |format  |type  |num_seqs  |sum_len  |min_len  |avg_len  |max_len|
+|---|---|---|---|---|---|---|---|
+|SRR23803536.trimmed.fasta.gz  |FASTA   |DNA      |1,234  |153,328       |35    |124.3      |151|
+|SRR23803537.trimmed.fasta.gz  |FASTA   |DNA        |567   |82,897       |35    |146.2      |151|
+|SRR23803538.trimmed.fasta.gz  |FASTA   |DNA         |89   |12,039       |64    |135.3      |151|
+|SRR23803539.trimmed.fasta.gz  |FASTA   |DNA         |10    |1,323       |96    |132.3      |151|
 
 
 Summary:
