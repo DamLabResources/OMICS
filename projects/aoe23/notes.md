@@ -65,18 +65,18 @@ This will pull down the changes that were made from the fork/and this will also 
 
 
 
-## Week 5 Assignment 
-*Deliverables for next week: 
+# Week 5 Assignment 
+*Deliverables for next week:*
 1.	Zip up files
 2.	Use du -h to show the change in size to validate change in size 
-3.	Upload readME*
+3.	Upload readME
 
 # 1. Zip up files
 
 *Last week  I uploaded fastq files to the share/aoe23/. This week I want to (1) move those files into a folder that is called data, and (2) then zip them up so that they are smaller. I will keep the unzipped and zipped files temporarily in order to (3) show their change in disk space, and then I will (4) remove the files.
 
 
-# Move files into new folder
+## Move files into new folder
  
 First make folder: `mkdir data`
 then move `mv SRR27237081.fastq SRR27237082.fastq data/`
@@ -86,7 +86,7 @@ realized that the move was then just in ao23 folder so moved it directly into da
 repeat the move of the rest of the files into data folder 
 
 
-# Zip the files
+## Zip the files
 
 `gzip -9 data/SRR27237076.fastq -c > data/SRR27237076.fastq.gz
 gzip -9 data/SRR27237082.fastq -c > data/SRR27237082.fastq.gz
@@ -97,9 +97,39 @@ gzip -9 data/SRR27237077.fastq -c > data/SRR27237077.fastq.gz`
 Repeat for each file 
 Note this takes a long time to do and so i opened multiple terminals to do this at the same time, and then worked on something else
 
-Once files zipped, then look at the difference in size of each: 
+# 2. Compare the size of each file
 
 
+First looked at all of the sizes of unzipped files
 
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237076.fastq`
+11G     data/SRR27237076.fastq
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237077.fastq`
+9.2G    data/SRR27237077.fastq
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237081.fastq`
+13G     data/SRR27237081.fastq
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237082.fastq`
+11G     data/SRR27237082.fastq
 
+then looked at sizes of zipped files
+
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237076.fastq.gz`
+1.8G    data/SRR27237076.fastq.gz
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237077.fastq.gz` 
+1.5G    data/SRR27237077.fastq.gz
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237081.fastq.gz` 
+2.0G    data/SRR27237081.fastq.gz
+jupyter-aoe23@Mistake-Not:~/share/aoe23$ `du -h data/SRR27237082.fastq.gz`
+1.8G    data/SRR27237082.fastq.gz
+
+can see that all zipped files are now a range of 1.5G - 2.0G which is much smaller than the size they were before.
+
+# 3. All changes have now been uploaded to this readme file in 'notes.md'
+
+in order to make sure that they are save I will 
+`git commit -a -m 'final updates to notes.md for class week 6'`
+
+`git push `
+
+and then sync fork within github site: https://github.com/ardenedgerton/OMICS/tree/main
  
