@@ -1,0 +1,258 @@
+    1  whoami
+    2  whoami --help
+    3  man man
+    4  whoami --version
+    5  man whoami
+    6  pwd #print current working directory
+    7  ls #list files and directories
+    8  cd #change directory to 'share'
+    9  ls
+   10  ls -l
+   11  cd share
+   12  cd OMICS/
+   13  ls
+   14  cd wk01
+   15  ls
+   16  ls -lrt
+   17  cd
+   18  cd share/OMICS/wk01/romeo_and_juliet/
+   19  cd
+   20  cd share
+   21  cd OMICS/
+   22  cd wk01/
+   23  tree -d
+   24  cd
+   25  echo $USER
+   26  echo $HOME
+   27  ! !
+   28  echo $! !
+   29  clear
+   30  ~/share/OMICS/wk01/$ ! !
+   31  cd
+   32  cd share
+   33  cd OMICS/
+   34  cd wk01/
+   35  ! !
+   36  tree -d
+   37  ls -l
+   38  cd
+   39  ls -l
+   40  share/OMICS/wk01/
+   41  share
+   42  cd
+   43  cd share
+   44  cd OMICS/
+   45  cd wk01/
+   46  cd ..
+   47  cd ../..
+   48  cs share/OMICS/
+   49  ls
+   50  cd wk02
+   51  cd share
+   52  cd OMICS/
+   53  cd
+   54  ls -l --h --r
+   55  ls -1 --human-readable --reverse
+   56  ls - thor
+   57  ls -thor
+   58  cd
+   59  cd share
+   60  cd OMICS/
+   61  wk01/
+   62  cd wk01/
+   63  cd war_and_peace/
+   64  head
+   65  icite -H 26032263
+   66  icite 36915214 - H
+   67  icite 36915214 -H
+   68  icite 36915214 -c | sort
+   69  pwd
+   70  cd ~/share/OMICS/wk02
+   71  mkdir ab4822
+   72  ls -lrt
+   73  rmdir ab4822/
+   74  ls -lrt
+   75  cd students/
+   76  mkdir ab4822/
+   77  ls -lrt
+   78  cd ab4822
+   79  echo vanilla > flavors.txt
+   80  history > history.txt
+   81  tree
+   82  find . -type f -name 'fl*.*'
+   83  cd students
+   84  cd ~/share/OMICS/wk02/students/ab4822
+   85  ls -ltr
+   86  cd ~/share/OMICS/wk02/students
+   87  ls -lrt
+   88  cd ab4822
+   89  pwd
+   90  ls ../*/fl*.txt
+   91  cat ../*/fl*.txt > ALL_FLAVORS.tx
+   92  cat ../*/fl*.txt
+   93  cat ../*/fl*.txt | sort
+   94  tree -P 'fl*.txt'
+   95  cat ../*/fl*.txt > ALL_FLAVORS.txt
+   96  cat All_FLAVORS.txt
+   97  ..
+   98  cd students
+   99  cat ALL_FLAVORS.txt
+  100  cat ALL_FLAVORS.txt | sort | uniq -c | sort -nr
+  101  cat ALL_FLAVORS.txt | uniq -c
+  102  cd ../../../wk01
+  103  cd romeo_and_juliet
+  104  pwd
+  105  lst
+  106  ls
+  107  head romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  108  tail romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  109  tail romeo-and-juliet_TXT_FolgerShakespeare.txt
+  110  catromeo-and-juliet_TXT_FolgerShakespeare.txt
+  111  less romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  112  catromeo-and-juliet_TXT_FolgerShakespeare.txt
+  113  catcatromeo-and-juliet_TXT_FolgerShakespeare.txt romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  114  more romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  115  less romeo-and-juliet_TXT_FolgerShakespeare.txt
+  116  grep ROMEO romeo-and-juliet_TXT_FolgerShakespeare.txt 
+  117  grep ROMEO romeo-and-juliet_TXT_FolgerShakespeare.txt -n
+  118  grep ROMEO romeo-and-juliet_TXT_FolgerShakespeare.txt | sort |  wc -l 
+  119  grep romeo-and-juliet_TXT_FolgerShakespeare.txt  -c
+  120  grep ROMEO romeo-and-juliet_TXT_FolgerShakespeare.txt -c
+  121  history > history.txt
+  122  cd ../..
+  123  history > history.txt
+  124  clear
+  125  cd wk02
+  126  find content/
+  127  find content/ foind content/ | grep 01
+  128  find content/ foind content/ | grep 01 find content/ | grep 01
+  129  find content/ foind content/ | grep 01 find content/ | grep 01 find content/ | grep 01
+  130  clear
+  131  cd students
+  132  cd ab4822
+  133  cp ../../content/* .
+  134  vim assignment01_quit_vim.md
+  135  vim assignment02_hjkl.md 
+  136  vim assignment03_writequit.md 
+  137  vim y2023_iii2_review_nanopore.md 
+  138  vim abc.txt
+  139  history > history.txt
+  140  cd ~/repos
+  141  git clone https://github.com/penguoin/OMICS-2024-
+  142  git clone https://github.com/penguoin/OMICS-2024-.git
+  143  ls
+  144  ls OMICS-2024-/
+  145  tree OMICS/
+  146  tree OMICS-2024-/
+  147  cd tmp
+  148  cd
+  149  mkdir tmmp
+  150  cd tmmp
+  151  git clone https://github.com/penguoin/OMICS-2024-.git
+  152  tree OMICS-2024-/
+  153  pwd
+  154  cd ~/repos/OMICS-2024-/
+  155  ls
+  156  ls -help
+  157  ls --help
+  158  tree
+  159  ls --help
+  160  ls -lrt
+  161  lsS
+  162  ls -lrS
+  163  ls -lrSh
+  164  cd 
+  165  cd ~/repo/OMICS-2024-/projects
+  166  ~/repos/OMICS-2024-/projects
+  167  mkdir temmporary
+  168  clear
+  169  cd
+  170  cd repos/OMICS-2024-/projects/
+  171  mkdir ab4822
+  172  cd ab4822/
+  173  vim README.mmd
+  174  git add README.mmd 
+  175  git commit -a -m 
+  176  git -a 0 mm 'Added project readme'
+  177  clear
+  178  l -o
+  179  vim README.md
+  180  clear
+  181  cs
+  182  clear
+  183  cd
+  184  ~/share/OMICS/wk03
+  185  vim README.mmd
+  186  ls -l
+  187  ~/share/OMICS/wk03
+  188  cd ~/share/OMICS/wk03
+  189  vim READMME.md
+  190  ls -l
+  191  vim ab4822.md
+  192  ls -l
+  193  cd
+  194  clear
+  195  cd share/OMICS/wk03
+  196  l
+  197  mkdir history
+  198  clear
+  199  history
+  200  cd history
+  201  clear
+  202  history | tee README_ab4822.md
+  203  head README_ab4822.md 
+  204  clear
+  205  echo "HELLO WORLD" | tee -a README_ab4822.md 
+  206  tail README_ab4822.md 
+  207  echo "HELLO WORLD" | tee -a README_ab4822.md 
+  208  cat README_ab4822.md 
+  209  tail README_ab4822.md 
+  210  echo "ABC" >> README_ab4822.md 
+  211  taill README_ab4822.md
+  212  tail README_ab4822.md
+  213  cd
+  214  cd repos/OMICS-2024-/projects/ab4822//
+  215  clear
+  216  ls -o
+  217  git status README.mmd 
+  218  touch CATS.md
+  219  git status 
+  220  clear
+  221  ls
+  222  git status CATS.md 
+  223  git add CATS.md 
+  224  git status CATS.md 
+  225  git commmit CATS.md
+  226  git commit CATS.md -m 'README was already commmitted, so I added CATS.md'
+  227  git config --global user.name "penguoin"
+  228  git config --global user.email ab4822@drexel.edu
+  229  git config --list
+  230  git commit CATS.md -m 'README was already commmitted, so I added CATS.md'
+  231  git push
+  232  clear
+  233  ssh-keygen -t ed25519 -C "ab4822@drexel.edu"
+  234  ls ~/.ssh/
+  235  cat ~/.ssh/id_ed25519.pub
+  236  git push
+  237  cd ~repos/
+  238  cd
+  239  ~repos/
+  240  cd repos
+  241  rm -rf OMICS-2024-/
+  242  git clone git@github.com:penguoin/OMICS-2024-.git
+  243  mkdir OMICS/projects/ab4822
+  244  OMICS-2024-/projects/ab4822
+  245  mmkdor OMICS-2024-/projects/ab4822
+  246  mkdir OMICS-2024-/projects/ab4822
+  247  ls -l
+  248  cd OMICS-2024-/projects/ab4822/
+  249  vim README.md
+  250  git status
+  251  git add README.md 
+  252  git status
+  253  git commit -m 'Created my README.md file'
+  254  git status
+  255  git push origin
+  256  history 
+  257  grep history >> history.txt
+  258  history | tee history.txt
