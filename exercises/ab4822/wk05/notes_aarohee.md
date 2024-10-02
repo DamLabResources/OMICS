@@ -50,6 +50,10 @@ did the same for trimmed and concatenated and checked stats
 
 cat solution/demuxed.stats.tsv
 
+git rm content/wk05/solution/*.fastq
+
+git commit -m 'removed fastq files'
+
 RESULTSSS
 
 file                        format  type  num_seqs  sum_len  min_len  avg_len  max_len
@@ -62,6 +66,11 @@ solution/SRR23803536.trimmed.fastq.gz  FASTQ   DNA      1,595  218,687       43 
 solution/SRR23803537.trimmed.fastq.gz  FASTQ   DNA      1,328  191,361       43    144.1      159
 solution/SRR23803538.trimmed.fastq.gz  FASTQ   DNA        882  125,097       51    141.8      159
 solution/SRR23803539.trimmed.fastq.gz  FASTQ   DNA      1,328  191,361       43    144.1      159
+
+git mv content/wk05/data/solution exercises/ab4822/wk05
+git commit -m "moved solutions"
+git add .
+git push origin main
 
 From what we found, there is some variability in the number of reads across samples. Two of the samples had the exact same read count. The read lengths are similar, with all samples exihibiting a mininum of 43 bases. The maximum length across all samples as well is consistent at 159 bases. The minimum, average, and maximum read lengths for each sample remain consistent between the demultiplexed and trimmed files.
 
