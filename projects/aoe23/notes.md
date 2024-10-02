@@ -414,3 +414,7 @@ first: download files and put in folder on desktop.
 - select .bam and .bam.bai file 
 
 
+______________________________________________________
+
+
+
