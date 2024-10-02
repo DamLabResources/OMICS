@@ -73,7 +73,7 @@ samtools depth alignments/SF_aer.bam | awk '{sum[$1] += $3; count[$1]++} END {fo
 # Identified amino acid change and protein information
 Using the sorted bam and bam.bai files for each SF sample and the saccharomyces_cerevisiae: genome, genome index, annotations - the SF samples were aligned against the reference genome on IGV. The following mutation was identified in chrXVI:475,551-478,857.
 
-![Amino_acid_change](NMdluli/wk06/IGV.\screenshot.png)
+![Amino_acid_change](NMdluli/wk06/IGVscreenshot.png)
 
 
 It appears that there may be some missense mutations in the Mitochondrial isoleucyl-tRNA synthetase enzyme. This enzyme is known to be responsible for attaching isoleucine to its corresponding tRNA (tRNA^Ile) during translation in the mitochondria. There were some deletions in this gene, particularly in the SF_ann strain. The SF_aer strain seemed to have some misense mutations in this gene as well. Deficiencies in this gene may have implications on the growth of the strain as it is a mitochondrial gene. 
