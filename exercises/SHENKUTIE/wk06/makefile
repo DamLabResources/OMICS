@@ -38,7 +38,11 @@ subsample:
 	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/OGstrain_R2.fq.gz |seqkit head -n 100000 -o OGstrain_R2_100k.fq.gz
 
 align: 
-	bwa mem $(REF) SF_ann_R* > SF_ann.sam
+	bwa mem refs/$(REFFA) SF_ann_R* > SF_ann.sam
+	bwa mem refs/$(REFFA) SF_aer_R* > SF_aer.sam
+	bwa mem refs/$(REFFA) OGstrain_R* > OGstrain.sam
+	ls -l *.sam
 
 clean:
-	rm -rf *.fq.*
+	rm -f *.fq.*
+	rm -rf refs
