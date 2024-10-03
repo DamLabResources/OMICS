@@ -22,10 +22,14 @@ solution/muxed.stats.tsv:
 # SRR23803539,CTGC,TCAG`
 # 
 # 4. After multiple unsuccessful attempts and consulting ChatGPT, I consulted Shirley and Joanna and they helped me figure out the right code as follows:
-# `seqkit grep -r -s  -p 'ACCT,CCAG' multiplexed.fq > SRR23803536.fastq'
-# 'seqkit grep -r -s  -p 'ACCT,TCAG' multiplexed.fq > SRR23803537.fastq'
-# 'eqkit grep -r -s  -p 'CTCG,CCAG' multiplexed.fq > SRR23803538.fastq'
-# 'seqkit grep -r -s  -p 'CTCG,TCAG' multiplexed.fq > SRR23803539.fastq`
+multiplexed.fq: $(MULTIPLEXED_FASTQ)
+	ln -s $(MULTIPLEXED_FASTQ) .
+
+separate: multiplexed.fq
+	seqkit grep -r -s  -p 'ACCT,CCAG' multiplexed.fq > SRR23803536.fastq
+	seqkit grep -r -s  -p 'ACCT,TCAG' multiplexed.fq > SRR23803537.fastq
+	seqkit grep -r -s  -p 'CTCG,CCAG' multiplexed.fq > SRR23803538.fastq
+	seqkit grep -r -s  -p 'CTCG,TCAG' multiplexed.fq > SRR23803539.fastq
 # 
 # 5. Consulted ChatGPT and used the following commands to trim the 5' and 3' barcodes from each sequence and zipped the files:
 # `seqkit subseq -r 5:-5 SRR23803536.fastq -o SRR23803536.trimmed.fastq
