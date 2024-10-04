@@ -109,6 +109,8 @@ In order to start working in the jupyter notebook must make sure that we pull do
 ## Ongoing to-do's
 
 1. Write a markdown file that describes your dataset. Include that seqkit stats table as a markdown table.
-    - This will be located in my `repos/OMICS/projects/aoe23/datasummary.md`
+    Code Used: 
+    - `jupyter-aoe23@Mistake-Not:~/share/aoe23$ seqkit stats data/S*.gz*`
+    - This summary is stored in a table in `repos/OMICS/projects/aoe23/datasummary.md`
 2. Describe the number of reads per sample in your study. Does it tell you anything interesting?
     - This will be located in my `repos/OMICS/projects/aoe23/datasummary.md`
