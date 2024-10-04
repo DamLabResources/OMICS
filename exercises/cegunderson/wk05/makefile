@@ -30,14 +30,22 @@ separate: multiplexed.fq
 	seqkit grep -r -s  -p 'ACCT,TCAG' multiplexed.fq > SRR23803537.fastq
 	seqkit grep -r -s  -p 'CTCG,CCAG' multiplexed.fq > SRR23803538.fastq
 	seqkit grep -r -s  -p 'CTCG,TCAG' multiplexed.fq > SRR23803539.fastq
-# 
+	ls -l SRR238035??.fastq
+
 # 5. Consulted ChatGPT and used the following commands to trim the 5' and 3' barcodes from each sequence and zipped the files:
-# `seqkit subseq -r 5:-5 SRR23803536.fastq -o SRR23803536.trimmed.fastq
-# seqkit subseq -r 5:-5 SRR23803537.fastq -o SRR23803537.trimmed.fastq
-# seqkit subseq -r 5:-5 SRR23803538.fastq -o SRR23803538.trimmed.fastq
-# seqkit subseq -r 5:-5 SRR23803539.fastq -o SRR23803539.trimmed.fastq`
+rmbarcode: SRR238035??.fastq
+	seqkit subseq -r 5:-5 SRR23803536.fastq -o SRR23803536.trimmed.fastq
+	seqkit subseq -r 5:-5 SRR23803537.fastq -o SRR23803537.trimmed.fastq
+	seqkit subseq -r 5:-5 SRR23803538.fastq -o SRR23803538.trimmed.fastq
+	seqkit subseq -r 5:-5 SRR23803539.fastq -o SRR23803539.trimmed.fastq
+	ls -l SRR238035*.trimmed.fastq
+
 # followed by
-# `seqkit subseq -r 5:-5 SRR23803536.fastq -o SRR23803536.trimmed.fastq.zg
+endstats: SRR238035??.trimmed.fastq
+	seqkit stats SRR238035??.trimmed.fastq > demuxed.stats.tsv
+	cat demuxed.stats.tsv
+
+# seqkit subseq -r 5:-5 SRR23803536.fastq -o SRR23803536.trimmed.fastq.zg
 # seqkit subseq -r 5:-5 SRR23803537.fastq -o SRR23803537.trimmed.fastq.zg
 # seqkit subseq -r 5:-5 SRR23803538.fastq -o SRR23803538.trimmed.fastq.gz
 # seqkit subseq -r 5:-5 SRR23803539.fastq -o SRR23803539.trimmed.fastq.gz`
