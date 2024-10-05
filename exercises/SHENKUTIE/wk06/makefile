@@ -36,13 +36,28 @@ subsample:
 	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/SF_aer_R2.fq.gz |seqkit head -n 100000 -o SF_aer_R2_100k.fq.gz
 	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/OGstrain_R1.fq.gz |seqkit head -n 100000 -o OGstrain_R1_100k.fq.gz
 	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/OGstrain_R2.fq.gz |seqkit head -n 100000 -o OGstrain_R2_100k.fq.gz
+	seqkit stats *_100k.fq.gz
 
 align: 
-	bwa mem refs/$(REFFA) SF_ann_R* > SF_ann.sam
-	bwa mem refs/$(REFFA) SF_aer_R* > SF_aer.sam
-	bwa mem refs/$(REFFA) OGstrain_R* > OGstrain.sam
+	bwa mem refs/$(REFFA) SF_ann_R?_100k.fq.gz > SF_ann.sam
+	bwa mem refs/$(REFFA) SF_aer_R?_100k.fq.gz > SF_aer.sam
+	bwa mem refs/$(REFFA) OGstrain_R?_100k.fq.gz > OGstrain.sam
 	ls -l *.sam
 
+view:
+	samtools view -q 30 -f 0 -c SF_ann.sam
+	samtools view -q 30 -f 0 -c SF_aer.sam
+	samtools view -q 30 -f 0 -c OGstrain.sam
+
+sort:
+	samtools sort SF_ann.sam -o SF_ann.sorted.bam
+	samtools sort SF_aer.sam -o SF_aer.sorted.bam
+	samtools sort OGstrain.sam -o OGstrain.sorted.bam
+
+index:
+	samtools index SF_ann.sorted.bam
+	samtools index SF_aer.sorted.bam
+	samtools index OGstrain.sorted.bam
 clean:
 	rm -f *.fq.*
 	rm -rf refs
