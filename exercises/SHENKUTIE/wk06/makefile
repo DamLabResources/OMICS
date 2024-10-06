@@ -58,6 +58,9 @@ index:
 	samtools index SF_ann.sorted.bam
 	samtools index SF_aer.sorted.bam
 	samtools index OGstrain.sorted.bam
+
+image:
+	align_map.png
 clean:
 	rm -f *.fq.*
 	rm -rf refs
