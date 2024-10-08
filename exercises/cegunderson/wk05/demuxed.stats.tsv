@@ -1,0 +1,5 @@
+file                       format  type  num_seqs  sum_len  min_len  avg_len  max_len
+SRR23803536.trimmed.fastq  FASTQ   DNA      1,234  153,328       35    124.3      151
+SRR23803537.trimmed.fastq  FASTQ   DNA        567   82,897       35    146.2      151
+SRR23803538.trimmed.fastq  FASTQ   DNA         89   12,039       64    135.3      151
+SRR23803539.trimmed.fastq  FASTQ   DNA         10    1,323       96    132.3      151
