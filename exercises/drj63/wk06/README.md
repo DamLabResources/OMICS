@@ -56,4 +56,5 @@ Purpose: Determine depth of coverage of the alignment and store in .tsv file
 
 **IGV view of alignment**
 
+![Screenshot of IGV sequence alignment](exercises/drj63/wk06/2024_Oct02_AdvOmics_wk06_Assignment_IGV-AA-change_CHRI-YAL039C.png)
 
