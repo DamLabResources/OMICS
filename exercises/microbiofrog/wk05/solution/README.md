@@ -2,8 +2,7 @@
 
 Place your solution files here as you create them.
 
-Do not add your solution files to git (as you will create merge conflicts).
-
+Do not add your solution files to git (as*
 This is automatically done for you by the `.gitignore` file in the directory above.
 That file contains the contents.
 

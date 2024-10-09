@@ -1,18 +1,16 @@
-OMICS PROJECT:
+# OMICS PROJECT
 
+## Introduction:
 
+## Literature Review:
 
-Introduction:
+## Methodology:
 
-Literature Review:
+## Results:
 
-Methodology:
+## Discussion: 
 
-Results:
+## Conclusion: 
 
-Discussion: 
-
-Conclusion: 
-
-References:
+## References:
  
