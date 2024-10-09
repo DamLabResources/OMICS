@@ -14,17 +14,17 @@ The bioproject number of the data on Europian nucleotide archive is PRJEB40487. 
 
 ## Result
 
-###Seqstats
+### Seqstats
 
 Seqstat results of two samples RNA seq shown in the table: 
-```
+
 |File                  |Format |Type  |Num_seqs |Sum_len   |Min_len  |Avg_len   |Max_len |
 |:--------------------:|:-----:|:----:|:-------:|:--------:|:-------:|:--------:|:------:|
 |ERR4620265_1.fastq.gz |FASTQ  |DNA   |147,399  |11,054,925|75       |75        |75      |  
 |ERR4620265_2.fastq.gz |FASTQ  |DNA   |147,399  |11,054,925|75       |75        |75      |
 |ERR4620277_1.fastq.gz |FASTQ  |DNA   |115,539  |8,665,425 |75       |75        |75      |
 |ERR4620277_2.fastq.gz |FASTQ  |DNA   |115,539  |8,665,425 |75       |75        |75      |
-```
+
 
 ## Discussion
 
