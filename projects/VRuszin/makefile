@@ -1,4 +1,5 @@
 DIROUT := /data/share/vr433
+VER_ENSEMBL := 112
 
 hello:
 	echo $(DIROUT)
@@ -9,3 +10,14 @@ hello:
 # https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump
 download:
 	fasterq-dump -p SRR26186565 --outdir $(DIROUT)
+
+# -------------------------------------------------------------------
+# Download human genome reference
+refs: /data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz /data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
+
+/data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz:
+	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
+
+
+/data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz:
+	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/gtf/homo_sapiens/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
