@@ -37,7 +37,7 @@ For this data set and for the purposes of this class, I decided to work with the
 
 ### Links to Primary Literature:
 
-- Link to paper: https://www-ncbi-nlm-nih-gov.ezproxy2.library.drexel.edu/geo/query/acc.cgi?acc=GSE250443
+- Link to paper: https://www-sciencedirect-com.ezproxy2.library.drexel.edu/science/article/pii/S1535610824000084?via%3Dihub
 
 - Link to GEO Accession Viewer: https://www-ncbi-nlm-nih-gov.ezproxy2.library.drexel.edu/geo/query/acc.cgi?acc=GSE250443
 
@@ -85,6 +85,8 @@ For this data set and for the purposes of this class, I decided to work with the
 
 
 
+
+
 ### Summary of SSR IDs and corresponding samples of interest: 
 
 | Short Hand Sample ID | Sample ID from NCBI                 | Type of Edit | Donor | ncbi_ssr   | Zipped File Name               |
@@ -93,6 +95,11 @@ For this data set and for the purposes of this class, I decided to work with the
 | car_d48              | control HA-CAR-T cells, donor 48    | control      | 48    | SRR27237077 | data/SRR27237077.fastq.gz       |
 | ada_car_d43          | ADA-OE HA-CAR-T cells, donor 43     | ada-oe       | 48    | SRR27237081 | data/SRR27237081.fastq.gz       |
 | car_d43              | control HA-CAR-T cells, donor 43    | control      | 43    | SRR27237082 | data/SRR27237082.fastq.gz       |
+
+
+
+
+
 
 
 
