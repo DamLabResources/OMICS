@@ -7,6 +7,7 @@ MIIM-620S
 4. [Projects](projects/README.md)
 5. [Grading](grading/README.md)
 6. [Cheatsheets](#cheatsheets)
+7. [Datasets](datasets/)
 
 ## Course 
 
