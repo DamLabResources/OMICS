@@ -3,7 +3,7 @@ DIROUT := /data/share/vr433
 hello:
 	echo $(DIROUT)
 
-all: SRR26186566/SRR26186566.sra
+all: SRR26186566/SRR26186566.fastq
 
 # Download FASTQ files from RNA-seq single cell Illumina HiSeq 4000 reads
 # https://www.ncbi.nlm.nih.gov/sra?term=SRX21898392
@@ -16,5 +16,5 @@ download:
 SRR26186566/SRR26186566.sra:
 	prefetch SRR26186566
 
-download:
+SRR26186566/SRR26186566.fastq: SRR26186566/SRR26186566.sra
 	 fasterq-dump -p SRR26186566 --outdir SRR26186566
