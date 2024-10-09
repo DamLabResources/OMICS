@@ -4,6 +4,7 @@ DIR_HS := /data/share/refs/HS.GRCh38
 
 hello:
 	echo $(DIROUT)
+	ls -l $(DIR_HS)
 
 all: SRR26186566/SRR26186566.fastq
 
@@ -25,6 +26,10 @@ SRR26186566/SRR26186566.fastq: SRR26186566/SRR26186566.sra
 # Download human genome reference
 #
 refs: ${DIR_HS}/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz ${DIR_HS}/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
+	find ${DIR_HS}
+	ls -l ${DIR_HS}
+
+gtf:{DIR_HS}/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
 	find ${DIR_HS}
 	ls -l ${DIR_HS}
 
