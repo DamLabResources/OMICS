@@ -1,5 +1,6 @@
 DIROUT := /data/share/vr433
 VER_ENSEMBL := 112
+DIR_HS := /data/share/refs/HS.GRCh38
 
 hello:
 	echo $(DIROUT)
@@ -13,11 +14,26 @@ download:
 
 # -------------------------------------------------------------------
 # Download human genome reference
-refs: /data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz /data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
+#
+refs: ${DIR_HS}/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz ${DIR_HS}/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
+	find ${DIR_HS}
+	ls -l ${DIR_HS}
 
-/data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz:
-	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
+${DIR_HS}:
+	mkdir -p $@
 
+${DIR_HS}/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz: Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz ${DIR_HS}
+	mv $< ${DIR_HS}
 
-/data/share/refs/HS.GRCh38/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz:
-	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/gtf/homo_sapiens/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz
+${DIR_HS}/Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz: Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz ${DIR_HS}
+	mv $< ${DIR_HS}
+
+Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz:
+	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/fasta/homo_sapiens/dna/$@
+
+Homo_sapiens.GRCh38.$(VER_ENSEMBL).gtf.gz:
+	wget -L ftp://ftp.ensembl.org/pub/release-$(VER_ENSEMBL)/gtf/homo_sapiens/$@
+
+# -------------------------------------------------------------------
+clobber:
+	rm -rf ${DIR_HS}
