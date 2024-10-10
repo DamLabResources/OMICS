@@ -9,7 +9,8 @@
 Real E, Howick VM, Dahalan FA, Witmer K, Cudini J, Andradi-Brown C, Blight J, Davidson MS, Dogga SK, Reid AJ, Baum J, Lawniczak MKN.     
 [A single-cell atlas of Plasmodium falciparum transmission through the mosquito.](doc/single_cell_atlas.pdf)     
 Nat Commun. 2021 May 27;12(1):3196.     
-doi: 10.1038/s41467-021-23434-z.      
+[doi: 10.1038/s41467-021-23434-z.](https://www.nature.com/articles/s41467-021-23434-z)      
+[data](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)    
 [PMID: 34045457](https://pubmed.ncbi.nlm.nih.gov/34045457/);       
 PMCID: PMC8159942.
 
