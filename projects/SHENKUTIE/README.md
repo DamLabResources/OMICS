@@ -14,7 +14,7 @@ The bioproject number of the data on Europian nucleotide archive is PRJEB40487. 
 
 ## Result
 
-### Seqstats
+### Seqkit stats
 
 Seqstat results of two samples RNA seq shown in the table: 
 
