@@ -12,7 +12,7 @@ Nat Commun. 2021 May 27;12(1):3196.
 [doi: 10.1038/s41467-021-23434-z.](https://www.nature.com/articles/s41467-021-23434-z)      
 [data](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)    
 [PMID: 34045457](https://pubmed.ncbi.nlm.nih.gov/34045457/);       
-PMCID: PMC8159942.
+[PMCID: PMC8159942.](https://pubmed.ncbi.nlm.nih.gov/34045457/)
 
 ## Data sets
 
