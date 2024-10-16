@@ -1,0 +1,3 @@
+file,format,type,num_seqs,sum_len,min_len,avg_len,max_len
+data/multiplexed.fq,FASTQ,DNA,1900,264787,43,139.4,159
+data/multiplexed.short.fa,FASTA,DNA,10,1380,66,138.0,159
