@@ -4,6 +4,7 @@
 
 ### Project description:
 
+
  Malaria parasites have complex life cycle forms providing different developmental strategies uniquely adapted to navigate specific host environments.A single cell RNA-sequencing is able to resolve cell level heterogenity in complex cell populations. The objective of this project is to explore patterns og gene expression in individual parasites accross multiple developmental stages and parasite species.   
 
 Real E, Howick VM, Dahalan FA, Witmer K, Cudini J, Andradi-Brown C, Blight J, Davidson MS, Dogga SK, Reid AJ, Baum J, Lawniczak MKN.     
