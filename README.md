@@ -7,6 +7,7 @@ MIIM-620S
 4. [Projects](projects/README.md)
 5. [Grading](grading/README.md)
 6. [Cheatsheets](#cheatsheets)
+7. [Datasets](datasets/)
 
 ## Course 
 
@@ -78,10 +79,10 @@ The `projects` folder contains information about the ongoing project and is wher
 |   [3](content/wk03/README.md)   |09/04/2024 | Hello World         | git part I                                     |DVK           | **released**
 |   [4](content/wk04/README.md)   |09/11/2024 | Hello World         | git part II                                    |DVK           | **released**
 |   [5](content/wk05/README.md)   |09/18/2024 | Hello World         |Seqkit command line tools for manipulating fastx|WND, JCM      | **released**
-| [**6**](content/wk06/README.md) |09/25/2024 | Align all the things| NGS read alignment                             |WND, JCM      | **released**
-|    7                            |10/02/2024 | Align all the things|Visualizing alignments with IGV & file transfer |WND, JCM      | unreleased
-|    8                            |10/09/2024 | Align all the things|nf-core pipelines and project discussion        |WND, JCM      | unreleased
-|    9                            |10/16/2024 | Align all the things| Statistical Analysis of Count-Data             |WND, JCM      | unreleased
+|   [6](content/wk06/README.md)   |09/25/2024 | Align all the things| NGS read alignment                             |WND, JCM      | **released**
+|   [7](content/wk07/README.md)   |10/02/2024 | Align all the things| Visualizing alignments with IGV & file transfer|WND, JCM      | unreleased
+|    8                            |10/09/2024 | Align all the things| nf-core pipelines and project discussion       |WND, JCM      | na
+| [**9**](content/wk09/README.md) |10/16/2024 | Align all the things| Variant calling                                |WND, JCM      | unreleased
 |   10                            |10/23/2024 | OMICS as count table| Transcriptomics                                |WND, JCM      | unreleased
 |   11                            |10/30/2024 | OMICS as count table| Statistical Analysis of Count-Data             |WND, JCM      | unreleased
 |   12                            |11/06/2024 | OMICS as count table| Peak analysis in OMICS data (ChIP-Seq)         |WND, JCM      | unreleased
