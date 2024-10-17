@@ -11,3 +11,11 @@ hw01:
 	sh variant_pipeline.sh $(BAMaer) calls_aer.bcf
 	sh variant_pipeline.sh $(BAMann) calls_ann.bcf
 	sh variant_pipeline.sh $(BAMOG) calls_OG.bcf
+
+hw02a:
+	#bgzip --keep calls_aer.bcf
+	bcftools index -f calls_ann.bcf
+	bcftools index -f calls_OG.bcf
+
+clean:
+	rm *.csi
