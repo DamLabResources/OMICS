@@ -1,5 +1,10 @@
 # This is my Wk06 README
+See makefile for commands used.
 
-Note: in wk06 lecture.md, under Activity, the directive to "use the '--help' and 'man' Use the `--help` and `man` pages to learn how to create indexes for bwa." doesn't make sense to me as you cannot run these options with bwa command.
+## Number of reads aligned at Q30 threshold
 
-Brought this up to DVK, she said she will note this and fix for next year. 
+File name   | Count
+------------|-------
+SF_ann.sam  | 184775
+SF_aer.sam  | 184623
+OGstrain.sam| 182351

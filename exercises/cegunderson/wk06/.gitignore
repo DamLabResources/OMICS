@@ -1,5 +1,6 @@
 .ipynb_checkpoints
 *fastq*
 *.fq*
-
+*.swp
+*.sam
 

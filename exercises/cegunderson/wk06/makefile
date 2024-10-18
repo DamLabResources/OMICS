@@ -1,8 +1,10 @@
+REF := /data/share/refs/SGD/saccharomyces_cerevisiae.fa
 DIR_READS := /data/share/OMICS/wk06/reads
 SEED := 1234
 
 hello:
 	find $(DIR_READS) | xargs ls -o
+	ls -l $(REF)
 
 s0_stats:
 	seqkit stats $(DIR_READS)/*.fq.gz
@@ -19,4 +21,13 @@ s2_stats:
 	seqkit stats *_100k.fq.gz
 
 
+s3_align:
+	bwa mem $(REF) SF_ann_R?_100k.fq.gz > SF_ann.sam
+	bwa mem $(REF) SF_aer_R?_100k.fq.gz > SF_aer.sam
+	bwa mem $(REF) OGstrain_R?_100k.fq.gz > OGstrain.sam
+
+s4_count:
+	samtools view -q 30 -c SF_ann.sam
+	samtools view -q 30 -c SF_aer.sam
+	samtools view -q 30 -c OGstrain.sam
 
