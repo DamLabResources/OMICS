@@ -26,8 +26,14 @@ s3_align:
 	bwa mem $(REF) SF_aer_R?_100k.fq.gz > SF_aer.sam
 	bwa mem $(REF) OGstrain_R?_100k.fq.gz > OGstrain.sam
 
-s4_count:
-	samtools view -q 30 -c SF_ann.sam
-	samtools view -q 30 -c SF_aer.sam
-	samtools view -q 30 -c OGstrain.sam
+s4_sort:
+	samtools sort SF_ann.sam -o SF_ann.sorted.sam
+	samtools sort SF_aer.sam -o SF_aer.sorted.sam
+	samtools sort OGstrain.sam -o OGstrain.sorted.sam
+
+s5_count:
+	samtools view -q 30 -f 0 -c SF_ann.sam
+	samtools view -q 30 -f 0 -c SF_aer.sam
+	samtools view -q 30 -f 0 -c OGstrain.sam
+
 
