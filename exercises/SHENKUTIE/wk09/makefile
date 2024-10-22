@@ -1,4 +1,5 @@
 REF := /data/share/refs/SGD/saccharomyces_cervisiae.fa
+GFF := /data/share/refs/SGD/saccharomyces_cervisiae.gff
 BAMaer := /data/share/OMICS/wk06/alns/SF_aer.sorted.bam
 BAMann := /data/share/OMICS/wk06/alns/SF_ann.sorted.bam
 BAMOG := /data/share/OMICS/wk06/alns/OGstrain.sorted.bam
