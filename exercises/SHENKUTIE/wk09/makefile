@@ -12,10 +12,14 @@ hw01:
 	sh variant_pipeline.sh $(BAMann) calls_ann.bcf
 	sh variant_pipeline.sh $(BAMOG) calls_OG.bcf
 
+# create index files
 hw02a:
-	#bgzip --keep calls_aer.bcf
+	bcftools index -f calls_aer.bcf	
 	bcftools index -f calls_ann.bcf
 	bcftools index -f calls_OG.bcf
+
+hw02b:
+	bcftools isec -C calls_aer.bcf calls_ann.bcf calls_OG.bcf -o calls_aer_only.bcf
 
 clean:
 	rm *.csi
