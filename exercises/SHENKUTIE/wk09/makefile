@@ -18,8 +18,12 @@ hw02a:
 	bcftools index -f calls_ann.bcf
 	bcftools index -f calls_OG.bcf
 
+# find variants that are unique to each of the three yeast strains
 hw02b:
 	bcftools isec -C calls_aer.bcf calls_ann.bcf calls_OG.bcf -o calls_aer_only.bcf
+	bcftools isec -C calls_ann.bcf calls_aer.bcf calls_OG.bcf -o calls_ann_only.bcf
+	bcftools isec -C calls_OG.bcf calls_aer.bcf calls_ann.bcf -o calls_OG_only.bcf
+	ls -ort *_only.bcf
 
 clean:
 	rm *.csi
