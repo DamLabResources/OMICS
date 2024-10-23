@@ -1,0 +1,4 @@
+sample,fastq_1,fastq_2,replicate
+J-Lat 10.6-ATAC_rep1,SRR15931096_1.fastq.gz,SRR15931096_2.fastq.gz,1
+J-Lat 10.6-ATAC_TNF_rep1,SRR15931099_1.fastq.gz,SRR15931099_2.fastq.gz,1
+

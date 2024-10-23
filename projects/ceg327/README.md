@@ -8,7 +8,11 @@ This goal of this project is to analyze publicly available ATAC-seq datasets fro
 3. Methodology
 Bioproject: PRJNA764194
 SRA: SRP337615
-	SRR15931104: J-Lat 8.4-ATAC_TNF_rep1; Homo sapiens; ATAC-seq
+
+SRR15931104:	J-Lat 8.4-ATAC_TNF_rep1; Homo sapiens; ATAC-seq
+SRR15931102:	J-Lat 8.4-ATAC_rep1; Homo sapiens; ATAC-seq
+SRR15931099:	J-Lat 10.6-ATAC_TNF_rep1; Homo sapiens; ATAC-seq
+SRR15931096:	J-Lat 10.6-ATAC_rep1; Homo sapiens; ATAC-seq
 	
 
 4. Results
