@@ -36,7 +36,8 @@ conda config --remove channels conda-forge
 When adding the channels back individually did not work, I reorderd the channels manually in the .condarc file:
 ```bash
 cd ~/
-ls -la # locate .condarc
+ls -la
+# locate .condarc
 vim .condarc
 cd repos/OMICS/projects/ceg327/
 conda config --show channels
@@ -55,7 +56,61 @@ Upgraded matplotlib to most recent version:
 ```bash
 pip install --upgrade matplotlib
 ```
-Re-ran the test and it made a little more progress, but then list the same error message.
+Re-ran the test and it made a little more progress, but then list the same error message. So I found viewed the .nextflow.log file to see what was wrong at line 768:
+```bash
+cd ~/.nextflow/assets/nf-core/atacseq/./workflows/
+ls -al
+cat atacseq.nf
+cat -n atacseq.nf
+# saw that line 768 error was related to adding my email
+cd ~/repos/OMICS/projects/ceg327/
+ls
+nextflow run nf-core/atacseq -profile test,conda --outdir ./results --macs_gsize 2700000000 -resume
+# removed '--email ceg327@drexel.edu'
+```
+Made a little more progress, then got the following error message:
+```plaintext
+Pipeline completed with errors-
+ERROR ~ Error executing process > 'NFCORE_ATACSEQ:ATACSEQ:MERGED_LIBRARY_ATAQV_ATAQV (OSMOTIC_STRESS_T100_SE_REP1)'
+
+Caused by:
+  Process `NFCORE_ATACSEQ:ATACSEQ:MERGED_LIBRARY_ATAQV_ATAQV (OSMOTIC_STRESS_T100_SE_REP1)` terminated with an error exit status (127)
+
+Command executed:
+  ataqv \
+      --ignore-read-groups \
+      --mitochondrial-reference-name MT \
+      --peak-file OSMOTIC_STRESS_T100_SE_REP1.mLb.clN_peaks.broadPeak \
+      --tss-file genes.tss.bed \
+       \
+      --autosomal-reference-file genome.fa.autosomes.txt \
+      --metrics-file "OSMOTIC_STRESS_T100_SE_REP1.ataqv.json" \
+      --threads 2 \
+      --name OSMOTIC_STRESS_T100_SE_REP1 \
+      NA \
+      OSMOTIC_STRESS_T100_SE_REP1.mLb.mkD.sorted.bam
+  
+  cat <<-END_VERSIONS > versions.yml
+  "NFCORE_ATACSEQ:ATACSEQ:MERGED_LIBRARY_ATAQV_ATAQV":
+      ataqv: $( ataqv --version )
+  END_VERSIONS
+
+Command exit status:
+  127
+
+Command output:
+  (empty)
+
+Command error:
+  ataqv: error while loading shared libraries: libboost_filesystem.so.1.85.0: cannot open shared object file: No such file or directory
+
+Work dir:
+  /home/jupyter-ceg327/repos/OMICS/projects/ceg327/work/8c/acf7e67958659c10ba0587fd01d427
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+
+ -- Check '.nextflow.log' file for details
+```
 
 ### 4. Results
 
