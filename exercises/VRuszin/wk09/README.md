@@ -25,3 +25,5 @@ bedtools intersect -a unique_variants.bed -b saccharomyces_cerevisiae.bed -wa -u
 ```
 
 ## Visualizing a selection of them in IGV
+
+![Screenshot of IGV](wk09hw.PNG "Label underneath the image")
