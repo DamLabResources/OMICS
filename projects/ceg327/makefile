@@ -1,6 +1,7 @@
 REF_DIR := /data/share/refs/hgjlat
-REF_FA := $(REF_DIR)/Jlat106_GRCH38.fa.gz
-REF_GFF := $(REF_DIR)/Jlat106.gff3
+#REF_FA := $(REF_DIR)/Jlat106_GRCH38.fa.gz
+REF_FA := $(REF_DIR)/Jlat106.fa
+REF_GFF := $(REF_DIR)/Jlat106.gff
 DATA_DIR := /data/share/ceg327
 
 ## This is my project makefile
@@ -22,6 +23,7 @@ run_pipeline:
 		--gff $(REF_GFF) \
 		--read_length 150 \
 		-profile conda
+		--macs_gsize 3100000000
 
 ## info from nf-core on custom reference genomes using nf-core/rnaseq as an example
 
