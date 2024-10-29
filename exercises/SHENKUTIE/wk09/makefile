@@ -1,8 +1,14 @@
-REF := /data/share/refs/SGD/saccharomyces_cervisiae.fa
-GFF := /data/share/refs/SGD/saccharomyces_cervisiae.gff
+REF := /data/share/refs/SGD/saccharomyces_cerevisiae.fa
+GFF := /data/share/refs/SGD/saccharomyces_cerevisiae.gff
 BAMaer := /data/share/OMICS/wk06/alns/SF_aer.sorted.bam
 BAMann := /data/share/OMICS/wk06/alns/SF_ann.sorted.bam
 BAMOG := /data/share/OMICS/wk06/alns/OGstrain.sorted.bam
+
+headgff:
+	head -100 $(GFF)
+
+features:
+	cut -f 3 $(GFF) |sort|uniq -c |sort -n
 
 # bcftools mpileup -r chrIII -Ou -f
 bam:
