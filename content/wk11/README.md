@@ -19,4 +19,4 @@ By the end of this week you should be able to:
  
 # Assignment
 
-Complete a peak calling analysis for any other from PRJNA622558.
+Complete a peak calling analysis for any other pull down from PRJNA622558.
