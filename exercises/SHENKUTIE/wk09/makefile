@@ -9,6 +9,8 @@ headgff:
 
 features:
 	cut -f 3 $(GFF) |sort|uniq -c |sort -n
+t1:
+	bcftools query -f '%CHROM\t%POS0\t%END\n' calls_aer_only.vcf
 
 # bcftools mpileup -r chrIII -Ou -f
 bam:
@@ -27,10 +29,14 @@ hw02a:
 
 # find variants that are unique to each of the three yeast strains
 hw02b:
-	bcftools isec -C calls_aer.bcf calls_ann.bcf calls_OG.bcf -o calls_aer_only.bcf
-	bcftools isec -C calls_ann.bcf calls_aer.bcf calls_OG.bcf -o calls_ann_only.bcf
-	bcftools isec -C calls_OG.bcf calls_aer.bcf calls_ann.bcf -o calls_OG_only.bcf
-	ls -ort *_only.bcf
+	bcftools isec -C calls_aer.bcf calls_ann.bcf calls_OG.bcf -o calls_aer_only.vcf
+	bcftools isec -C calls_ann.bcf calls_aer.bcf calls_OG.bcf -o calls_ann_only.vcf
+	bcftools isec -C calls_OG.bcf calls_aer.bcf calls_ann.bcf -o calls_OG_only.vcf
+	ls -ort *.?cf
+
+hw03:
+	bedtools intersect -a calls_aer_only.vcf -b $(GFF)
 
 clean:
 	rm *.csi
+	rm -f *_only.bcf
