@@ -83,12 +83,12 @@ The `projects` folder contains information about the ongoing project and is wher
 |   [7](content/wk07/README.md)   |10/02/2024 | Align all the things| Visualizing alignments with IGV & file transfer|WND, JCM      | **released**
 |    8                            |10/09/2024 | Align all the things| nf-core pipelines and project discussion       |WND, JCM      | na
 |   [9](content/wk09/README.md)   |10/16/2024 | Align all the things| Variant calling                                |WND, JCM      | **released**
-| [**10**](content/wk10/README.md)|10/23/2024 | OMICS as count table| Transcriptomics                                |WND, JCM      | **released**
-|   11                            |10/30/2024 | OMICS as count table| Statistical Analysis of Count-Data             |WND, JCM      | unreleased
-|   12                            |11/06/2024 | OMICS as count table| Peak analysis in OMICS data (ChIP-Seq)         |WND, JCM      | unreleased
+|   [10](content/wk10/README.md)  |10/23/2024 | OMICS as count table| Transcriptomics                                |WND, JCM      | **released**
+| [**11**](content/wk11/README.md)|10/30/2024 | OMICS as count table| Peak analysis in OMICS data                    |WND, JCM      | **released**
+|   12                            |11/06/2024 | OMICS as count table| Statistical Analysis of Count Data             |WND           | unreleased
 |   13                            |11/13/2024 | OMICS as count table| Enrichment Analysis                            |WND, DVK      | unreleased
-|   14                            |11/20/2024 | OMICS as count table| Visualization of OMICs scale data              |WND           | unreleased
-|   15                            |11/27/2024 |                     | Project (Remote)                               |WND           | unreleased
+|   14                            |11/20/2024 |                     | Project                                        |Everyone      | unreleased
+|   15                            |11/27/2024 |                     | Project (Remote)                               |Everyone      | unreleased
 |   16                            |12/04/2024 |                     | Project                                        |Everyone      | unreleased
 |   17                            |12/04/2024 |Project Presentations| Project Presentations                          |Everyone      | unreleased
 
