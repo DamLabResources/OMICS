@@ -144,4 +144,4 @@ REF=/data/share/refs/SGD/saccharomyces_cerevisiae.fa
 
 1. Download all overlap bed files 
 
-2. Load into iG
+2. Load into IGV and screenshot an overlap. 
