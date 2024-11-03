@@ -77,7 +77,7 @@ $(QUANT_DIR)/%: $(SOURCE_MINI)/%_1.fastq.gz $(SOURCE_MINI)/%_2.fastq.gz
     
     `make -f makefile.og.full2`
     
-11. Now I have a quants.full folder and a quants.mini folder for each that works appropriately. 
+11. Now I have a quants.full folder and a quants.mini folder for each that works appropriately. (NOTE: this step took a long time to run, when I do this for my project, remember that this will probably take a while)
 
 *** 
 
