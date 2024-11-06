@@ -22,8 +22,9 @@ run_pipeline:
 		--fasta $(REF_FA) \
 		--gff $(REF_GFF) \
 		--read_length 150 \
-		-profile conda
-		--macs_gsize 3100000000
+		-profile docker \
+		--macs_gsize 3100000000 \
+		-c nextflow.config
 
 ## info from nf-core on custom reference genomes using nf-core/rnaseq as an example
 
