@@ -242,3 +242,31 @@ No addtl HW- just class notes
 
 # Week 08
 Work on project files
+
+
+# Week 09
+Variant Calling
+-use bcftools
+
+## Pipeline
+
+Adjust your pipeline so you can specify which chromosome you generate variant calls for at the command line.
+Update the documentation and place it in your week 9 excercise folder and commit it.
+
+## Exercise
+
+For each of the three strains aligned in `/data/share/omics/wk06/alns`
+
+1. Use the pipeline to create bcf files for the OG_strain, SF_aer, and SF_ann from any chromosome but `chrI`.
+2. Use `bcftools isec` to find varaints that are unique to each of the three strains.
+3. Use `bedtools` to find the unique variants that overlap with regions defined in `/share/refs/SGD/saccharomyces_cerevisiae.gff`.
+4. Visualize a selection of them in IGV.
+
+1. 
+In variant pipeline.sh
+creating a pileup file 
+- this piles up aligned reads (from bam file) to the reference
+- note: the reads in bam file have been aligned to the reference so they are clustered/ piled in clusters
+- can now better see variants when call them bc they are more organized
+pipe this file into calling the variants using `bcftools call`  
+pipe that into a filter: DP= # of reads has to be over 10, quality over 20
