@@ -1,0 +1,29 @@
+# Versions:
+#    go-basic.obo: fmt(1.2) rel(2023-10-09) 46,296 Terms; optional_attrs(relationship)
+#    goslim_generic.obo: fmt(1.2) rel(go/2023-10-09/subsets/goslim_generic.owl) 206 Terms
+
+# SECTION: BP protein
+GO:0031399  # BP    . uGOs   280  17 L06 D06 R06 BC    .R.. .... regulation of protein modification process
+
+# SECTION: BP phosph
+GO:0051174  # BP    . uGOs   310   7 L05 D05 R05 ABC   .R.. .... regulation of phosphorus metabolic process
+
+# SECTION: BP reg nitrogen compound
+GO:0051171  # BP    . uGOs  1574  35 L04 D04 R04 BC    .R.. .... regulation of nitrogen compound metabolic process
+
+# SECTION: MF Transcription regulation
+GO:0140110  # MF    2 uGOs    24   7 L01 D01 R01 B     .... .... transcription regulator activity
+
+# SECTION: MF binding
+GO:0005488  # MF **    4 uGOs  1833  43 L01 D01 R01 A     .... .... binding
+
+# SECTION: MF broad
+GO:0003674  # MF **    1 uGOs 11238  29 L00 D00 R00       .... .... molecular_function
+
+
+# GROUP NAME: init
+# SECTION: Misc.
+GO:0008150  # BP **    1 uGOs 27537  20 L00 D00 R00       .... .rdu biological_process
+GO:0065007  # BP **    5 uGOs 11451   6 L01 D01 R01 B     .... .... biological regulation
+GO:0008152  # BP **   26 uGOs  9009  27 L01 D01 R01 C     .... .rdu metabolic process
+
