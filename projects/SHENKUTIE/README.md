@@ -20,7 +20,7 @@ Nat Commun. 2021 May 27;12(1):3196.
 The bioproject number of the data on Europian nucleotide archive is PRJEB40487. A single cell RNA sequencing data were taken from ENA archive. This transcriptomic data can demonstrate the gene expression levels of different plasmodium species at various developmental stages(sporozoite, merozoite, trophozoite, schizont, and gametocyte). 
 
 ## Methodology
-
+A single cell sequence of transcriptomics across the life cycle of Plasmodium parasie. 
 ## Result
 
 ### Seqkit stats
