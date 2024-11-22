@@ -14,6 +14,7 @@ Nat Commun. 2021 May 27;12(1):3196.
 [data](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)    
 [PMID: 34045457](https://pubmed.ncbi.nlm.nih.gov/34045457/);       
 [PMCID: PMC8159942.](https://pubmed.ncbi.nlm.nih.gov/34045457/)
+[Bioproject number: PRJEB40487](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)
 
 ## Data sets
 
