@@ -4,3 +4,27 @@ REF_GTF := $(REF_DIR)/GCF_000002765.6_GCA_000002765_genomic.gtf.gz
 REF_GFF := $(REF_DIR)/GCF_000002765.6_GCA_000002765_genomic.gff.gz
 SEED := 100 
 READ_DIR := ~/share/ts3576/myproject/
+
+ref: refs/$(REF_FNA)
+
+
+
+stats: 
+	seqkit stats $(READ_DIR)/ERR4620265_*.fastq.gz
+	seqkit stats $(READ_DIR)/ERR4620277_*.fastq.gz
+
+stats100k: 
+	seqkit stats ERR4620265_*.fastq.gz
+	seqkit stats ERR4620277_*.fastq.gz
+
+subsample: 
+	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/ERR4620265_1.fastq.gz |seqkit head -n 100000 -o ERR4620265_1.fastq.gz
+	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/ERR4620265_2.fastq.gz |seqkit head -n 100000 -o ERR4620265_1.fastq.gz
+	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/ERR4620277_1.fastq.gz |seqkit head -n 100000 -o ERR4620277_1.fastq.gz
+	seqkit sample -p 0.02 -s $(SEED) $(READ_DIR)/ERR4620277_2.fastq.gz |seqkit head -n 100000 -o ERR4620277_2.fastq.gz
+
+align: 
+	bwa mem refs/$(REF_FNA) ERR4620265_* > ERR4620265.sam 
+	bwa mem refs/$(REF_FNA) ERR4620277_* > ERR4620277.sam 
+	
+	
