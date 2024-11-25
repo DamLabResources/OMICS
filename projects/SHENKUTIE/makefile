@@ -11,13 +11,13 @@ ref: refs/$(REF_FNA)
 refs/$(REF_FNA): $(REF)	
 	ln -s $(REF) refs
 
-refs/$(REF_FNA).ERR46202: refs refs/$(REF_FNA)
+refs/$(REF_FNA).ERR4620265: refs refs/$(REF_FNA)
 	bwa index refs/$(REF_FNA)
 
 refs: 
 	mkdir refs
 
-refidx: refs/$(REF_FNA).ERR46202
+refidx: refs/$(REF_FNA).ERR4620265
 
 
 stats: 
