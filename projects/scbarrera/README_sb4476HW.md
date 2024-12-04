@@ -243,7 +243,7 @@ No addtl HW- just class notes
 # Week 08
 Work on project files
 
-
+--------------------------------------------------------------------------------------
 # Week 09
 Variant Calling
 -use bcftools
@@ -270,3 +270,4 @@ creating a pileup file
 - can now better see variants when call them bc they are more organized
 pipe this file into calling the variants using `bcftools call`  
 pipe that into a filter: DP= # of reads has to be over 10, quality over 20
+
