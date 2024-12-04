@@ -11,8 +11,64 @@ READ_DMSO01 := $(DIR_READ)/SRR25648801_DMSO.fastq.gz
 READ_LRA08 := $(DIR_READ)/SRR25648808_LRA.fastq.gz
 READ_DMSO09 := $(DIR_READ)/SRR25648809_DMSO.fastq.gz
 
-# Make target which extracts 20bp protospacer (x20) from reads for each file
-x20: $(READ_LRA00)
-	seqkit subseq -r 33:52 $(READ_LRA00) | seqkit seq -s > $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+RDX20_LRA00 := $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+RDX20_DMSO01 := $(DIR_20NT)/SRR25648801_DMSO_20nt.fasta
+RDX20_LRA08 := $(DIR_20NT)/SRR25648808_LRA_20nt.fasta
+RDX20_DMSO09 := $(DIR_20NT)/SRR25648809_DMSO_20nt.fasta
+
+FASTQ_FILES := $(wildcard $(DIR_READ)/SRR*.fastq.gz)
+FASTX20_FILES := $(patsubst $(DIR_READ)/SRR%.fastq.gz,$(DIR_READ)/SRR%_20nt.fasta,$(FASTQ_FILES))
+
+
+
+# STEP 01: EXTRACT 20BP PROTOSPACER FROM READS
+# Make target which extracts 20bp protospacer (x20) from reads for each file. 
+# TO RUN ON COMMAND LINE:
+#	$ make x20
+x20: 
+	seqkit subseq -r 33:52 $(READ_LRA00) | seqkit seq -s > $(RDX20_LRA00)
+	seqkit subseq -r 33:52 $(READ_DMSO01) | seqkit seq -s > $(RDX20_DMSO01)
+	seqkit subseq -r 33:52 $(READ_LRA08) | seqkit seq -s > $(RDX20_LRA08)
+	seqkit subseq -r 33:52 $(READ_DMSO09) | seqkit seq -s > $(RDX20_DMSO09)
 	ls -l $(DIR_20NT)
 	head $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+
+
+# STEP 02: COUNT HOW MANY TIMES PROTOSPACERS SHOWED UP
+
+
+
+
+
+
+# STEP CLEAN
+# clean is usually at the bottom
+# This removes .fasta files in the 02.reads_20nt directory if you want to reset and try again 
+clean:
+	rm -f $(DIR_20NT)/*.fasta
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ----------------------------------------------------------------------------------------------
+# THESE BELOW ARE TO FIGURE OUT LATER- MAKE THEM MORE GENERIC
+# VIEW EXAMPLE IN WEEK 10 lecture.md starting line 284
+ 
+test: $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+	echo $<
+
+$(DIR_20NT)/SRR%_20nt.fasta: $(DIR_READ)/%.fastq.gz
+	echo $<
+	#seqkit subseq -r 33:52 $(READ_LRA00) | seqkit seq -s > $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+	#ls -l $(DIR_20NT)
+	#head $(DIR_20NT)/SRR25648800_LRA_20nt.fasta
+
