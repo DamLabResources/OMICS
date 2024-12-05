@@ -80,3 +80,14 @@ chrVII	| 2.74297
 chrmt	| 10.0792
 
 ## See attached image from IGV:
+![IGV Snapshot](data/repos/OMICS/exercises/cegunderson/wk06/igv_snapshot_SGD_wk06.png)
+
+## UniProtKB:P23255 
+
+Transcription initiation factor (TFIID) subunit 2 (TAF2) functions as a component of the DNA-binding general transcription factor complex TFIID. 
+Binding of TFIID to a promoter (with or without TATA element) is the initial step in pre-initiation complex (PIC) formation. 
+TFIID plays a key role in the regulation of gene expression by RNA polymerase II through different activities such as 
+transcription activator interaction, core promoter recognition and selectivity, TFIIA and TFIIB interaction, chromatin modification 
+(histone acetylation by TAF1), facilitation of DNA opening and initiation of transcription (https://www.uniprot.org/uniprotkb/P23255/entry).
+
+The G>A nucleotide substitution at position 202,056 of chrIII results in an M>I amino acid change at this position in the TAF2 mRNA. 
