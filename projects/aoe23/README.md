@@ -72,6 +72,12 @@ For this data set and for the purposes of this class, I decided to work with the
         
 6. PPT used to display final results for class
 
+7. Sample ID sheet for Jupyter notebook: `info_sheet.csv`
+
+
+
+#### *Please look at `notebook_analysis_final.ipynb` for complete summary of results and steps taken to get them.*
+
 ***
 
 ## Discussion: 
@@ -85,12 +91,17 @@ Given that I wanted to compare ADA overexpression vs. control CAR_T cells, this 
     - Volcano plot and scatter plot with LOG2FC and Bh-pvalues
 - Overall, there was no meaningful pathway analysis when I put my exported subsets of genes into enrichr, which was to be expected. 
 - In order to further my analysis I would like to adjust for donor differences, and include many more donors to look for meaningful changes in the transcriptome. 
-    
+
+#### *Please review final ppt for complete discussion and summary.*
+
+
 ***
 
 ## Conclusion: 
 
 The key takeaways from this class were how to work with nf core and go from raw fasta file to a count table of differentially expressed genes and then finally uplaod that into enrichr. While this analysis did not show me meaningful results--I was able to use the skills learned in this class to do a practice workflow with data that I am interested in. 
+
+
 
 ***
 
