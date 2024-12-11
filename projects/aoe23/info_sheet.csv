@@ -1,0 +1,5 @@
+sample,treatment,donor,replicate
+ada_car_d48,ada,48,2
+car_d48,control,48,2
+ada_car_d43,ada,43,1
+car_d43,control,43,1
