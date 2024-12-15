@@ -1,0 +1,13 @@
+Week 11 Homework
+
+For the week 11 homework I chose to look at Fsh1. 
+To do this I had to first download it from GEO accession viewer using the SRR number, align to the genome with bwa mem, and then do the same steps as we had done in class.
+
+fasterq-dump --split-files SRR11466736
+bwa mem ~/share/refs/SGD/saccharomyces_cerevisiae.fa SRR11466736_1.fastq SRR11466736_2.fastq | samtools sort > Fsh1.sorted.bam
+conda init
+conda activate ~/envs/macs
+macs3 callpeak -t Fsh1.sorted.bam -c ~/share/OMICS/wk11/aligns/chip_notag_rep1.sorted.bam -f BAMPE -B -n FSH1 -g 12e6
+bedtools window -l 1000 -r 0 -u -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff  -b FSH1_peaks.narrowPeak > FSH1_hits.gff
+
+in order to use macs3 I needed to activate the environment we made in class. then I just used the callpeak function according to the specifications we had used and used bedtools to get the peak hits. then I uploaded it into igv, where I only saw bars on the gff file in the 'chrmt' chromosome
