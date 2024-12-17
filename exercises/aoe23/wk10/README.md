@@ -86,10 +86,20 @@ $(QUANT_DIR)/%: $(SOURCE_MINI)/%_1.fastq.gz $(SOURCE_MINI)/%_2.fastq.gz
 
 1. make sure pandas installed
 
+2. Pull out the quant.sf files for each 
+
+    `mkdir quant_mini_sf_files`
+    `cd quants.mini`
+    `find . -name 'quant.sf' -exec cp {} ~/omics_aoe23/wk10/wk10_homework/quant_mini_sf_files/ \;`
+    
+    `mkdir quant_full_sf_files`
+    `cd quants.full`
+    `find . -name 'quant.sf' -exec cp {} ~/omics_aoe23/wk10/wk10_homework/quant_mini_sf_files/ \;`
+    
 
 2. Python Script to Create Gene Expression Matrices:
 
-    `nano gene_expression_matrix.py`
+    `nano create_gene_expression_matrix.py`
     
 3. After making the place to write the script, I included the following code below:
 
@@ -99,9 +109,9 @@ import os
 import pandas as pd
 
 # Define directories
-quants_mini_dir = '/path/to/quants.mini'
-quants_full_dir = '/path/to/quants.full'
-output_dir = '/path/to/exercises'
+quants_mini_dir = '/home/jupyter-aoe23/omics_aoe23/wk10/wk10_homework/quant_mini_sf_files'
+quants_full_dir = '/home/jupyter-aoe23/omics_aoe23/wk10/wk10_homework/quant_full_sf_files'
+output_dir = '~/share/OMICS/exercises/aoe23/wk10'
 
 # Function to read quant.sf files and create a gene expression matrix
 def create_expression_matrix(dir, group_name):
