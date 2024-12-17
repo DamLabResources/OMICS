@@ -14,13 +14,14 @@ Nat Commun. 2021 May 27;12(1):3196.
 [data](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)    
 [PMID: 34045457](https://pubmed.ncbi.nlm.nih.gov/34045457/);       
 [PMCID: PMC8159942.](https://pubmed.ncbi.nlm.nih.gov/34045457/)
+[Bioproject number: PRJEB40487](https://www.ebi.ac.uk/ena/browser/view/PRJEB40487)
 
 ## Data sets
 
 The bioproject number of the data on Europian nucleotide archive is PRJEB40487. A single cell RNA sequencing data were taken from ENA archive. This transcriptomic data can demonstrate the gene expression levels of different plasmodium species at various developmental stages(sporozoite, merozoite, trophozoite, schizont, and gametocyte). 
 
 ## Methodology
-
+A single cell sequence of transcriptomics across the life cycle of Plasmodium parasie. 
 ## Result
 
 ### Seqkit stats
