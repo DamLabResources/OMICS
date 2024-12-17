@@ -34,10 +34,22 @@ hw02a:
 hw02b:
 	bcftools isec -n-1 -c all calls_OG.bcf calls_aer.bcf calls_ann.bcf -p isec
 
+hw02c: isec/hw02c_ln.sh
+isec/hw02c_ln.sh: isec/README.txt
+	perl -ne 'if (/^isec.(\d{4}.vcf).*(calls.*).bcf/) {print "ln -s $$1 $$2.vcf\n"}' isec/README.txt > isec/hw02c_ln.sh
 
-hw03:
-	bedtools intersect -a isec/calls_aer.vcf -b $(GFF)
+hw02d:
+	cd isec; source hw02c_ln.sh
+
+ref_sgd.bed:
+	bedtools sort -i $(GFF) > ref_sgd.bed
+hw03: ref_sgd.bed
+	bedtools intersect -a ref_sgd.bed -b isec/calls_aer.vcf -bed > isec/sgd_aer.bed
+	bedtools intersect -a ref_sgd.bed -b isec/calls_ann.vcf -bed > isec/sgd_ann.bed
+	bedtools intersect -a ref_sgd.bed -b isec/calls_OG.vcf -bed > isec/sgd_OG.bed
 
 clean:
+	rm -f isec/hw02c_ln.sh
+	rm -f isec/calls*.vcf
 	rm *.csi
 	rm -f *_only.bcf
