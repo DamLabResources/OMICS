@@ -81,6 +81,7 @@ makefile for all additions made for running the pipeline.
 
 ### 4. Results
 
+![FIGURE 1](data/repos/OMICS/projects/ceg327/Figure1_OMICs.png)
 Figure 1. Chromatin accessibility of the integrated HIV-1 provirus in J-Lat 10.6
 cells during latency and reactivation. The nf-core/atacseq pipeline was used to
 compile publicly available ATAC-seq data from Shah et al. (2022) with a custom
@@ -91,6 +92,7 @@ then 50,000 cells were processed for ATAC-seq following the OMNI-ATAC protocol.
 ATAC-seq libraries were then sequenced by Illumina Hiseq2500 with a 50 bp
 paired-end format (Shah et al., 2022).
 
+![FIGURE 2](repos/OMICS/projects/ceg327/Figure2_OMICs.png)
 Figure 2. gRNA targets within the 5’ LTR are differentially accessible during
 latency and reactivation. Visualization of ATAC-seq data compiled with 5’ LTR
 annotations and gRNA target sequences was performed using IGV after processing
