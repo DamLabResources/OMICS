@@ -2,36 +2,24 @@
 
 ## Contents of This Data Summary
 
-##### 1. Using Advanced Omics to Support my Thesis Research
 
-##### 2. Data used from *Inosine Induces Stemness Features in CAR T cells and Enhances Potency* (Klysz, et al).
 
-##### 3. Links to Primary Literature:
+##### 1. Links to Primary Literature:
 
-##### 4. Introduction 
+##### 2. Introduction 
 
-##### 5. Location of Files: 
+##### 3. Location of Files: 
 
-##### 6. Summary of File Sizes: 
+##### 4. Summary of File Sizes: 
 
-##### 7. Summary of SSR IDs and corresponding samples of interest: 
+##### 5. Summary of SSR IDs and corresponding samples of interest: 
 
-##### 8. Summary of SSR IDs and corresponding samples of interest: 
+##### 6. Summary of SSR IDs and corresponding samples of interest: 
 
 
 
 
 ***
-
-
-### Using Advanced Omics to Support my Thesis Research
-
-My thesis project is centered around the idea that novel immunomodulator ADA-1 may enhance the function of CD8+T cell in the context of HIV and Cancer. For this class I decided to focus on a paper that introducted over expression of ADA-1 in CAR-T cells as this was a critical piece of primary literature that I used to build my hypothesis: *Inosine Induces Stemness Features in CAR T cells and Enhances Potency* (Klysz, et al).  What they found high level was that overexpression of ADA-1 increased the stemlike phenotype of CAR-Ts and increased thier efficacy in targeting solid tumors. Beyond thier killing and proliferation assays, they preformed RNA seq to understand the differences between the control CAR-T cells and the ADA-1 overexpression edited CAR-T (ADAOE-CAR-T). 
-
-
-### Data used from *Inosine Induces Stemness Features in CAR T cells and Enhances Potency* (Klysz, et al). 
-
-For this data set and for the purposes of this class, I decided to work with the RNA seq data in the format of FASTQ files, from 4 samples. Control CAR-T (from 2 donors) and ADAOE-CAR-T (from those same 2 donors). Here I hope to use the tools learned in this class to make inquiries about the differences in gene expression between the two groups, to build upon my hypothesis that ADA-1 may enhance the function of CD8+T cells. 
 
 
 
@@ -41,6 +29,7 @@ For this data set and for the purposes of this class, I decided to work with the
 
 - Link to GEO Accession Viewer: https://www-ncbi-nlm-nih-gov.ezproxy2.library.drexel.edu/geo/query/acc.cgi?acc=GSE250443
 
+- Link to the SSR Run selector: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1053617&o=acc_s%3Aa
 
 
 
