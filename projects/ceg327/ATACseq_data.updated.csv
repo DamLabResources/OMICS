@@ -1,0 +1,4 @@
+sample,fastq_1,fastq_2,replicate,control,control_replicate
+Untreated,/deepdata/share/cegunderson/PRJNA764194/SRR15931098_1.fastq.gz,/deepdata/share/cegunderson/PRJNA764194/SRR15931098_2.fastq.gz,1,,
+TNF,/deepdata/share/cegunderson/PRJNA764194/SRR15931101_1.fastq.gz,/deepdata/share/cegunderson/PRJNA764194/SRR15931101_2.fastq.gz,1,Untreated,1
+

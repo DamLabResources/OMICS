@@ -1,40 +1,81 @@
-REF_DIR := /data/share/refs/hgjlat
-#REF_FA := $(REF_DIR)/Jlat106_GRCH38.fa.gz
-REF_FA := $(REF_DIR)/Jlat106.fa
-REF_GFF := $(REF_DIR)/Jlat106.gff
-DATA_DIR := /data/share/ceg327
-
 ## This is my project makefile
+### all work was performed in Yawning-Angel
+
+REF_DIR := /deepdata/share/cegunderson/refs #pulled from Mistake-Not
+REF_FA := /deepdata/share/cegunderson/refs/Jlat106_GRCH38.fa.gz
+REF_GFF := /deepdata/share/cegunderson/refs/Jlat106.gff #cp Jlat106.gff3 Jlat106.gff 
+DATA_DIR := /deepdata/share/cegunderson
+OUT_DIR := /mnt/local-dvc-cache/data-projects/chelsea/atacseq/results_10292024b
+REF_BED := /deepdata/share/cegunderson/refs/Jlat106.bed
+REF_TSS := /deepdata/share/cegunderson/refs/Jlat106.tss.bed
 
 test:
-	nextflow
+	./nextflow
 
-# To-do: update
-gzip:
-	gzip SRR*.fastq
-
-run_pipeline:
-	mkdir -p results
-	nextflow run \
+run_updated:
+	./nextflow run \
 		nf-core/atacseq \
-		--input ./ATACseq_data.csv \
-		--outdir ./results \
+		--input ./ATACseq_data.updated.csv \
+		--outdir ./results_10302024 \
 		--fasta $(REF_FA) \
 		--gff $(REF_GFF) \
-		--read_length 150 \
+		--bed $(REF_BED) \
+		--tss_bed $(REF_TSS) \
+		--read_length 50 \
 		-profile docker \
 		--macs_gsize 3100000000 \
-		-c nextflow.config
+		--with control \
+		-resume
 
+#Below are the commands I used in troubleshooting the pipeline:
+
+##-c nextflow.config is this still needed?
+		
+##run_TNF:
+	./nextflow run \
+		nf-core/atacseq \
+		--input ./ATACseq_data.TNFonly.csv \
+		--outdir $(OUT_DIR) \
+		--fasta $(REF_FA) \
+		--gff $(REF_GFF) \
+		--read_length 50 \
+		-profile docker \
+		--macs_gsize 310000000 \
+		-resume
+
+##run_resume:
+	./nextflow run \
+	       	nf-core/atacseq \
+	       	--input ./ATACseq_data.csv \
+	       	--outdir $(OUT_DIR) \
+	       	--fasta $(REF_FA) \
+	       	--gff $(REF_GFF) \
+	       	--read_length 150 \
+	       	-profile docker \
+	       	--macs_gsize 3100000000 \
+		-resume
+
+##run_narrowpeaks:
+	./nextflow run \
+	       	nf-core/atacseq \
+	       	--input ./ATACseq_data.csv \
+	       	--outdir ./results \
+	       	--fasta $(REF_FA) \
+	       	--gff $(REF_GFF) \
+	       	--read_length 150 \
+	       	-profile docker \
+	       	--macs_gsize 3100000000 \
+		--narrow_peak \
+		-resume
 ## info from nf-core on custom reference genomes using nf-core/rnaseq as an example
 
-dirs:
+##dirs:
 	find $(REF_DIR)
 	find $(DATA_DIR) -name '*.fastq.gz'
 
 
-save_reference:
-	nextflow run \
+##save_reference:
+	./nextflow run \
     	nf-core/rnaseq \
    	--input samplesheet.csv \
     	--fasta Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz \
