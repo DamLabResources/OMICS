@@ -36,21 +36,21 @@ SRR15931099	| J-Lat 10.6-ATAC_TNF_rep1; Homo sapiens; ATAC-seq
 SRR15931096	| J-Lat 10.6-ATAC_rep1; Homo sapiens; ATAC-seq
 
 Only J-Lat 10.6 datasets will be used for this project. Please see
-~/data-projects/chelsea/atacseq/ATACseq_data.updated.csv for input details.
+`~/repos/OMICs/projects/ceg327/ATACseq_data.updated.csv` for input details.
 
-This data was analyzed using the nf-core/atacseq pipeline (Patel et al., 2023).
+This data was analyzed using the `nf-core/atacseq` pipeline (Patel et al., 2023).
 
-I made changes to nextflow atacseq pipeline as detailed in the makefile:
+I made changes to nextflow atacseq pipeline as detailed in the `makefile`:
 ```bash
 ~/repos/OMICs/projects/ceg327/makefile
 ```
-I had to re-install nextflow in my repo, as I couldn't run it from the makefile. 
+I had to re-install `nextflow` in my repo, as I couldn't run it from the `makefile`. 
 
 Next, I had to run the test the pipeline to confirm whether everything is working:
 ```bash
 nextflow run nf-core/atacseq -profile test,conda --outdir ./results
 ```
-Kept getting an error message related to the conda channel configuration, so I
+Kept getting an error message related to the `conda` channel configuration, so I
 reordered the channels by editing the .condarc file located in the home
 directory:
 ```bash
@@ -59,7 +59,7 @@ conda config --remove channels defaults
 conda config --remove channels bioconda
 conda config --remove channels conda-forge
 ```
-When adding the channels back individually did not work, I reorderd the channels manually in the .condarc file:
+When adding the channels back individually did not work, I reorderd the channels manually in the `.condarc` file:
 ```bash
 cd ~/
 ls -la
@@ -70,27 +70,32 @@ conda config --show channels
 ```
 I also added '--macs_gsize 2700000000', to eliminate errors related to the kmers-utilization.
 
-Then, I re-ran the nextflow test:
+Then, I re-ran the `nextflow` test:
 ```bash
 nextflow run nf-core/atacseq -profile test,conda --outdir ./results --macs_gsize 2700000000  -resume
 ```
 
-Once the test run completed, we moved all of my work to Yawning-Angel as running
-the pipeline required more memory than what was available from Mistake-Not. Please see the
-makefile for all additions made for running the pipeline.
+Once the test run completed, we moved all of my work to Yawning-Angel as
+running the pipeline required more memory than what was available from
+Mistake-Not. Please see the `makefile` for all additions made for running the
+pipeline.
+
+Once the pipeline completed the run, the bigwig files for each sample were
+loaded into IGV, along with .bed files I created for the gRNA sequences and LTR
+annotations, and the .gff file containing the J-Lat 10.6 genome annotations. 
 
 ### 4. Results
 
 ![FIGURE 1](data/repos/OMICS/projects/ceg327/Figure1_OMICs.png)
-Figure 1. Chromatin accessibility of the integrated HIV-1 provirus in J-Lat 10.6
-cells during latency and reactivation. The nf-core/atacseq pipeline was used to
-compile publicly available ATAC-seq data from Shah et al. (2022) with a custom
-J-Lat 10.6 reference genome and visualized alongside our gRNA target sequences
-using IGV (Robinson et al., 2011). J-Lat 10.6 cells were
-stimulated with TNF-α for 24 hr prior to FACS. Cells were sorted on GFP, and
-then 50,000 cells were processed for ATAC-seq following the OMNI-ATAC protocol.
-ATAC-seq libraries were then sequenced by Illumina Hiseq2500 with a 50 bp
-paired-end format (Shah et al., 2022).
+Figure 1. Chromatin accessibility of the integrated HIV-1 provirus in J-Lat
+10.6 cells during latency and reactivation. The nf-core/atacseq pipeline was
+used to compile publicly available ATAC-seq data from Shah et al. (2022) with a
+custom J-Lat 10.6 reference genome and visualized alongside our gRNA target
+sequences using IGV (Robinson et al., 2011). J-Lat 10.6 cells were stimulated
+with TNF-α for 24 hr prior to FACS. Cells were sorted on GFP, and then 50,000
+cells were processed for ATAC-seq following the OMNI-ATAC protocol.  ATAC-seq
+libraries were then sequenced by Illumina Hiseq2500 with a 50 bp paired-end
+format (Shah et al., 2022).
 
 ![FIGURE 2](repos/OMICS/projects/ceg327/Figure2_OMICs.png)
 Figure 2. gRNA targets within the 5’ LTR are differentially accessible during
@@ -104,9 +109,9 @@ The results show that stimulation with TNF-a results in greater chromatin
 accessibility across the integrated HIV-1 provirus in J-Lat 10.6 cells, as
 compared to an unstimulated state. Interestingly, we see some difference in
 acessibility at the 5' LTR in the region targeted by our SMRT-1 gRNA, while the
-target regions for SMRT-9, SMRT-4, and NFkB-1 gRNAs show little to no difference
-in acessibility. These changes will need to be quantified to determine
-significance.
+target regions for SMRT-9, SMRT-4, and NFkB-1 gRNAs show little to no
+difference in acessibility. These changes will need to be quantified to
+determine significance.
 
 ### 6. Conclusion
 
