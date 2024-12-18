@@ -51,7 +51,7 @@ seqkit stats data/multiplexed.* -T > muxed.stats.tsv`
 `seqkit fq2fa SRR23803538.fastq -o SRR23803538.fasta`  
 `seqkit fq2fa SRR23803539.fastq -o SRR23803539.fasta`  
 
-- Check file with `seqkit head SRR23803536.fasta`
+- Check file with `seqkit head SRR23803536.fasta`  
 
 - To trim the barcodes off I first used `seqkit amplicon` and it was trimming too much off so I skipped to seqkit replace since that worked for my classmates. (Will have to revisit seqkit amplicon.) Using seqkit replace it replaced the barcode with nothing so it removed barcode>
 - This didn't work: `seqkit amplicon -F ACCT -R CCAG -r 5:-5 SRR23803536.fasta > SRR23803536.trimmed.fastq.gz`
@@ -61,11 +61,11 @@ seqkit stats data/multiplexed.* -T > muxed.stats.tsv`
 `seqkit replace -s -p ^ACCT -r "" SRR23803537.fasta | seqkit replace -s -p TCAG$ -r "" -o SRR23803537.trimmed.fastq.gz`  
 `seqkit replace -s -p ^CTGC -r "" SRR23803538.fasta | seqkit replace -s -p CCAG$ -r "" -o SRR23803538.trimmed.fastq.gz`  
 `seqkit replace -s -p ^CTGC -r "" SRR23803539.fasta | seqkit replace -s -p TCAG$ -r "" -o SRR23803539.trimmed.fastq.gz`  
-
+  
 ### Statistics on all data
 - Utilized seqkit stats again on all file types and wrote it to a .tsv file  
 `seqkit stats -T *.fasta *.fastq *.fastq.gz > demuxed.stats.tsv`
-
+  
 - Results:
 |file                          |format  |type  |num_seqs|sum_len |min_len|avg_len | max_len|
 |------------------------------|--------|------|--------|--------|-------|--------|--------|
@@ -90,9 +90,10 @@ seqkit stats data/multiplexed.* -T > muxed.stats.tsv`
  - Are the read lengths the same between each sample?
      - The read lengths also range between samples.
  
-
+  
 ### Compress files not using
 Compressed files in ~/projects/sbCRISPRSCREEN/reads via command:  
+  
 `gzip SRR25648800_LRA.fastq SRR25648801_DMSO.fastq SRR25648808_LRA.fastq SRR25648809_DMSO.fastq`
 
 - Check the `du -h` to check how much of the drive is being used to make sure files zipped.
@@ -108,17 +109,17 @@ Compressed files in ~/projects/sbCRISPRSCREEN/reads via command:
 ### Sub-sample the first 100K from each set
 - I head the first 100000 reads from the fq (zipped) files and wrote that to a new .fq file for each sample  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/OGstrain_R1.fq.gz > ~/projects/sbOMICS_HW/wk06/OGstrain_R1.100k.fq`  
-
+  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/OGstrain_R2.fq.gz > ~/projects/sbOMICS_HW/wk06/OGstrain_R2.100k.fq`  
-
+  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/SF_aer_R1.fq.gz > ~/projects/sbOMICS_HW/wk06/SF_aer_R1.100k.fq`  
-
+  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/SF_aer_R2.fq.gz > ~/projects/sbOMICS_HW/wk06/SF_aer_R2.100k.fq`  
-
+  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/SF_ann_R1.fq.gz > ~/projects/sbOMICS_HW/wk06/SF_ann_R1.100k.fq`  
-
+  
 `seqkit head -n 100000 ~/share/OMICS/wk06/reads/SF_ann_R2.fq.gz > ~/projects/sbOMICS_HW/wk06/SF_ann_R2.100k.fq`  
-
+  
 - Check files with `seqkit head filename'
 
 
@@ -140,18 +141,18 @@ bwa index refs/saccharomyces_cerevisiae.fa`
 - The first file is ref then the 2nd, 3rd one is aligning to it - did this for all 3 sets of samples:  
 
 `bwa mem refs/saccharomyces_cerevisiae.fa reads/OGstrain_R1.100k.fq reads/OGstrain_R2.100k.fq > alns/OGstrain.sam`  
-
+  
 `bwa mem refs/saccharomyces_cerevisiae.fa reads/SF_aer_R1.100k.fq reads/SF_aer_R2.100k.fq > alns/SF_aer.sam`  
-
+  
 `bwa mem refs/saccharomyces_cerevisiae.fa reads/SF_ann_R1.100k.fq reads/SF_ann_R2.100k.fq > alns/SF_ann.sam`  
-
+  
 - Look at SAM flag explanation by Broad Institute: https://broadinstitute.github.io/picard/explain-flags.html
 
 ### Indexing contd.: Convert sam file to bam file
 - Utilized samtools to view sam file into bam file- did this for all 3:  
 `samtools view -b alns/OGstrain.sam > alns/OGstrain.bam`  
 `samtools view -b alns/SF_aer.sam > alns/SF_aer.bam`  
-`amtools view -b alns/SF_ann.sam > alns/SF_ann.bam'  
+`samtools view -b alns/SF_ann.sam > alns/SF_ann.bam`  
 - Note: this will always say "no samtools version available"
 
 
@@ -266,7 +267,7 @@ For each of the three strains aligned in `/data/share/omics/wk06/alns`
 - In variant pipeline.sh I selected chrII and added the "chrII" to bcftools mpileup line
 - Creating a pileup file by running the  variant_pipeline on command line using `sh`:  
 (base) jupyter-sb4476@Mistake-Not:~/projects/sbOMICS_HW/wk09  
-`$ sh variant_pipeline.sh ~/share/OMICS/wk06/alns/SF_aer.sorted.bam ~/projects/sbOMICS_HW/wk09/SF_aer.bcf`
+`sh variant_pipeline.sh ~/share/OMICS/wk06/alns/SF_aer.sorted.bam ~/projects/sbOMICS_HW/wk09/SF_aer.bcf`
 
 `sh variant_pipeline.sh ~/share/OMICS/wk06/alns/OGstrain.sorted.bam ~/projects/sbOMICS_HW/wk09/OGstrain.bcf`
 
@@ -323,15 +324,38 @@ SOURCE=/data/share/OMICS/wk10/mini
 ------------------------------------------------------
   
 # Week 11
+- Complete a peak calling analysis for any other pull down from PRJNA622558.  From document at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147927
 
+- I selected Met4
+### Downloaded the Met4 file from website
+- On command line:   
+jupyter-sb4476@Mistake-Not:~/projects/sbOMICS_HW$ `fasterq-dump -p SRR11466703`  
+  
+### Align to reference genome  
+`bwa mem ~/share/refs/SGD/saccharomyces_cerevisiae.fa ~/projects/sbOMICS_HW/SRR11466703_1.fastq > ~/projects/sbOMICS_HW/align_met4.sam`
+  
+### Convert from .sam file to .bam file  
+`samtools view -b ~/projects/sbOMICS_HW/align_met4.sam > ~/projects/sbOMICS_HW/align_met4.bam`
+  
+### Sort file  
+`samtools sort ~/projects/sbOMICS_HW/align_met4.bam > ~/projects/sbOMICS_HW/met4.sorted.bam`  
+  
+### Activate macs environment  
+`conda activate ~/envs/macs`  
+  
+### Call Peaks usings macs3 
+- First do seqkit stats on saccromyces…fa file to get genome size, then Make sure to specify genome size (-g 12e6) in command:  
 
-
-
-
-
-
-
- 
- 
- 
+`macs3 callpeak -t ~/projects/sbOMICS_HW/met4.sorted.bam -c ~/share/OMICS/wk11/aligns/chip_notag_rep1.sorted.bam -f BAMPE -B --outdir ~/projects/sbOMICS_HW/macs_output/ -n met4 -g 12e6`  
+  - This kept giving me division error:0
+  - I tried to figure it out but it looks like the files are correct.
+  - Unsure of solution?  
+  
+### Continuation to Find all hits within 1000bp upstream using `bedtools` and `saccharomyces_cerevisiae.gff` would have included the following command:  
+  
+`bedtools window -l 1000 -r 0 -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff -b ~/projects/sbOMICS_HW/macs_output/met4_peaks.narrowPeak -u> ~/projects/sbOMICS_HW/met4_hits.gff`  
+  
+### Find the intersect of reference and met4 genes  
+  
+`bedtools intersect -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff -b ~/projects/sbOMICS_HW/met4_hits.gff > scerevisiae_met4_intersect.gff`
 
