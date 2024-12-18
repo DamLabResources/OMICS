@@ -1,2 +1,5 @@
 *.swp
 *.?cf*
+isec/
+ref_sgd.bed
+hw02c_ln.sh
