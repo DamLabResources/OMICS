@@ -308,9 +308,24 @@ Intersect the reference file (file1) and the other file (file2)
 
 --------------------------------------------------------------------------------------
   
-# Week 10
-Variant Calling
+# Week 10  
   
+### Adjust the makefile
+-  This makefile was adjusted to run on `mini` directory:  
+REF=/data/share/refs/SGD/salmonindex  
+SOURCE=/data/share/OMICS/wk10/mini  
+  
+### Ran the makefile on command line by going to:  
+`cd ~/projects/sbOMICS_HW/wk10`  
+- Then run: `make all` 
+- Output is merged folder, quants folder, and [expression_matrix.sf](http://10.248.148.22/hub/user-redirect/lab/tree/repos/OMICS/projects/scbarrera/hw/expression_matrix.sf)  
+  
+------------------------------------------------------
+  
+# Week 11
+
+
+
 
 
 
