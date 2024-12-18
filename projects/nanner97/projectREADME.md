@@ -52,7 +52,7 @@ seqkit head -n 20000000 SRR*\_x.fastq
 ```
 will sub-sample each to the first 20 million reads
 
-**Makefile creation**
+**Makefile creation**  
 With Dr. Klopfenstein and Chelsea's help I created a Makefile with the following contents:
 
 ```bash
@@ -99,22 +99,22 @@ Then I ran the pipeline
 ```bash
 make run_updated
 ```
-**Running the pipeline**
+**Running the pipeline**  
 Immediately I ran into errors with SRR5720369 because for some reason it had non-English characters -- threw errors in macs2 and picard that it was unable to be read, so ultimately I just got rid of it
 
 The other samples ran fine until it was time for deepTools to run; it was unable to read the .tss.bed file that was generated from the Jlat genome
 To solve this I just copied and pasted the contents of the reference bed file and that seemed to solve the error
 
-**gRNAs**
+**gRNAs**  
 To be able to align the gRNAs to the resulting peaks, I created a bed file that specified where each gRNA sits on the HIV-1 provirus
 
-**Getting results**
+**Getting results**  
 The pipeline puts out bigwig files which can be visualized in IGV
 At the 5' end, the gRNAs do indeed overlap regions of increased accessibility: [5'](http://10.248.148.22/hub/user-redirect/lab/tree/share/jj993/OMICS_project/five%20prime2.png) which supports our "Tickle & Tweeze" strategy
 
 The 3' end does not align very well, but does so upstream: [3'](http://10.248.148.22/hub/user-redirect/lab/tree/share/jj993/OMICS_project/three%20prime2.png) [upstream](http://10.248.148.22/hub/user-redirect/lab/tree/share/jj993/OMICS_project/upstream.png)
 I believe this is because our genome is based on J-Lat 10.6, but the study uses J-Lat A2 which does not contain the full-length provirus
 
-**Future directions**
+**Future directions**  
 - Align gRNAs to peaks created with other LRAs
 - Try to correct .tss.bed reading issue --> need to look into deepTools and see if this can be specified anywhere
