@@ -236,38 +236,87 @@ bwa index refs/saccharomyces_cerevisiae.fa`
 
   
 --------------------------------------------------------------------------------------
-
+  
 # Week 07 
 No addtl HW- just class notes
-
+  
 # Week 08
 Work on project files
-
+  
 --------------------------------------------------------------------------------------
 # Week 09
 Variant Calling
--use bcftools
-
-## Pipeline
+- use bcftools
+  
+### Pipeline
 
 Adjust your pipeline so you can specify which chromosome you generate variant calls for at the command line.
-Update the documentation and place it in your week 9 excercise folder and commit it.
-
-## Exercise
+Update the documentation and place it in your week 9 excercise folder and commit it. (Will put it in this folder repos/projects/scbarrera/hw
+  
+### Exercise Outline
 
 For each of the three strains aligned in `/data/share/omics/wk06/alns`
 
 1. Use the pipeline to create bcf files for the OG_strain, SF_aer, and SF_ann from any chromosome but `chrI`.
-2. Use `bcftools isec` to find varaints that are unique to each of the three strains.
+2. Use `bcftools isec` to find variants that are unique to each of the three strains.
 3. Use `bedtools` to find the unique variants that overlap with regions defined in `/share/refs/SGD/saccharomyces_cerevisiae.gff`.
 4. Visualize a selection of them in IGV.
+  
+### 1.Use the pipeline to create bcf files for the OG_strain, SF_aer, and SF_ann from any chromosome but `chrI`.  
+- In variant pipeline.sh I selected chrII and added the "chrII" to bcftools mpileup line
+- Creating a pileup file by running the  variant_pipeline on command line using `sh`:  
+(base) jupyter-sb4476@Mistake-Not:~/projects/sbOMICS_HW/wk09  
+`$ sh variant_pipeline.sh ~/share/OMICS/wk06/alns/SF_aer.sorted.bam ~/projects/sbOMICS_HW/wk09/SF_aer.bcf`
 
-1. 
-In variant pipeline.sh
-creating a pileup file 
-- this piles up aligned reads (from bam file) to the reference
-- note: the reads in bam file have been aligned to the reference so they are clustered/ piled in clusters
-- can now better see variants when call them bc they are more organized
-pipe this file into calling the variants using `bcftools call`  
-pipe that into a filter: DP= # of reads has to be over 10, quality over 20
+`sh variant_pipeline.sh ~/share/OMICS/wk06/alns/OGstrain.sorted.bam ~/projects/sbOMICS_HW/wk09/OGstrain.bcf`
+
+`sh variant_pipeline.sh ~/share/OMICS/wk06/alns/SF_ann.sorted.bam ~/projects/sbOMICS_HW/wk09/SF_ann.bcf`
+
+- Variant pipeline contents:
+    - this piles up aligned reads (from bam file) to the reference
+    - note: the reads in bam file have been aligned to the reference so they are clustered/ piled in clusters
+    - can now better see variants when call them bc they are more organized
+    - pipe this file into calling the variants using `bcftools call`  
+    - pipe that into a filter: DP= # of reads has to be over 10, quality over 20
+    
+- Can Can then download the bcf file and open it in IGV
+  
+ ### 2. Use bcftools isec to find variants that are unique to each of the three strains.  
+ - Need to index the files first:  
+ ~/projects/sbOMICS_HW/wk09  
+ `bcftools index -f OGstrain.bcf > OGstrain.bcf.csi`  
+ `bcftools index -f SF_aer.bcf > SF_aer.bcf.csi`  
+ `bcftools index -f SF_ann.bcf > SF_ann.bcf.csi`  
+   
+ - Use bcftools isect  
+ `bcftools isec -n=3 OGstrain.bcf SF_aer.bcf SF_ann.bcf -p dir`
+ - outputs directory of 3 files with README and sites file:
+     - Using the following file names:
+        - dir/0000.vcf	for stripped	OGstrain.bcf
+        - dir/0001.vcf	for stripped	SF_aer.bcf
+        - dir/0002.vcf	for stripped	SF_ann.bcf
+   
+### 3. Use bedtools to find the unique variants that overlap with regions defined in /share/refs/SGD/saccharomyces_cerevisiae.gff  
+Intersect the reference file (file1) and the other file (file2)  
+`bedtools intersect -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff -b ~/projects/sbOMICS_HW/wk09/dir/0000.vcf > ~/projects/sbOMICS_HW/wk09/intersect_scerevisiae_OGstrain`  
+  
+`bedtools intersect -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff -b ~/projects/sbOMICS_HW/wk09/dir/0001.vcf > ~/projects/sbOMICS_HW/wk09/intersect_scerevisiae_SF_aer`  
+  
+`bedtools intersect -a ~/share/refs/SGD/saccharomyces_cerevisiae.gff -b ~/projects/sbOMICS_HW/wk09/dir/0002.vcf > ~/projects/sbOMICS_HW/wk09/intersect_scerevisiae_SF_ann`  
+  
+- Visualize on IGV
+
+--------------------------------------------------------------------------------------
+  
+# Week 10
+Variant Calling
+  
+
+
+
+
+
+ 
+ 
+ 
 
